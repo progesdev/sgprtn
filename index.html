@@ -641,8 +641,10 @@ body header.sgpr-shared-nav>a:not(.logo):hover,body header.sgpr-shared-nav>a:not
 body header.sgpr-shared-nav>a:not(.logo).active,body header.sgpr-shared-nav>a:not(.logo)[aria-current="page"]{background:#0a0a5a!important;color:#fff!important}
 body header.sgpr-shared-nav>a:not(.logo).active:hover,body header.sgpr-shared-nav>a:not(.logo)[aria-current="page"]:hover{background:#0a0a5a!important;color:#fff!important}
 body footer.sgpr-shared-footer{position:relative!important;isolation:isolate!important;flex:0 0 auto!important;width:100%!important;min-height:110px!important;height:auto!important;margin-top:auto!important;padding:22px!important;box-sizing:border-box!important;display:flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;overflow:hidden!important;background:#030329!important;color:#fff!important;border:0!important;font-family:"Ubuntu","Segoe UI",Arial,sans-serif!important}
-body footer.sgpr-shared-footer:before{content:""!important;position:absolute!important;left:0!important;top:0!important;width:38%!important;height:70px!important;background:#f5f5f7!important;clip-path:polygon(0 0,100% 0,84% 100%,0 100%)!important;pointer-events:none!important;z-index:-1!important}
+body footer.sgpr-shared-footer:before{content:""!important;position:absolute!important;left:0!important;top:0!important;width:38%!important;height:70px!important;background:#f5f5f7!important;clip-path:polygon(0 0,100% 0,84% 100%,0 100%)!important;pointer-events:none!important;z-index:0!important}
 body footer.sgpr-shared-footer div{position:relative!important;z-index:1!important;color:#fff!important;font-size:20px!important;line-height:1.5!important;font-weight:400!important}
+body .sgpr-about-me-content .sgpr-about-me-text h2{font-size:clamp(30px,3.4vw,46px)!important;line-height:1.12!important;overflow-wrap:normal!important;max-width:100%!important}
+@media(max-width:600px){body .sgpr-about-me-content .sgpr-about-me-text h2{font-size:30px!important;line-height:1.15!important}}
 @media(max-width:1000px){
  body .sgpr-shared-topbar{height:auto!important;min-height:40px!important;padding:8px 16px!important;gap:10px!important;align-items:flex-start!important;font-size:11px!important;flex-wrap:wrap!important}
  body .sgpr-shared-topbar .infos{gap:8px 16px!important;font-size:11px!important}
