@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<link rel="icon" type="image/svg+xml" href="assets/sgpr-favicon.svg">
+<link rel="shortcut icon" href="assets/sgpr-favicon.svg">
+<meta name="theme-color" content="#07074f">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Catalogue illustratif SGPR de pièces pour poids lourds et équipements industriels. Recherchez une famille de pièces et demandez la disponibilité.">
+<title>Catalogue de pièces – SGPR</title>
+<style>
+:root{--navy:#0a0a5a;--grey:#787269;--red:#d0110f;--light:#fff;--ink:#242633;--muted:#707582;--line:#e5e7ed;--blue:#2584c0;--shadow:0 2px 8px rgba(10,10,90,.07)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{min-height:100vh;display:flex;flex-direction:column;font-family:"Ubuntu","Segoe UI",Arial,sans-serif;background:#fff;color:var(--ink);line-height:1.5}a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}
+/* Identical SGPR header used by the other pages */
+.topbar{background:var(--grey);min-height:40px;display:flex;align-items:center;justify-content:space-between;padding-left:18%;font-size:14px;color:#fff;gap:12px}.topbar .infos{display:flex;gap:30px;flex-wrap:wrap}.topbar .devis{background:var(--navy);color:#fff;height:40px;padding:0 22px;display:flex;align-items:center;font-weight:700;margin-right:9%;white-space:nowrap}
+.nav{height:76px;min-height:76px;background:#fff;display:flex;align-items:center;padding-left:30%;position:relative;border-bottom:1px solid #eee;z-index:10;overflow:visible}.nav a:not(.logo){padding:0 25px;font-weight:700;font-size:14px;color:var(--navy);text-transform:uppercase;height:76px;display:flex;align-items:center;white-space:nowrap}.nav a:not(.logo):hover{color:var(--red)}.nav a.active{color:#fff!important;background:var(--navy);padding:0 25px!important;height:76px;display:flex;align-items:center}.logo{position:absolute;left:0;top:0;width:28%;height:118px;background:#fff;display:flex;align-items:center;justify-content:center;z-index:2;clip-path:polygon(0 0,100% 0,100% 45%,88% 100%,0 100%)}.logo img{width:min(92%,360px);height:auto}
+.page-shell{width:min(1420px,92%);margin:0 auto;padding:24px 0 58px;flex:1}.breadcrumbs{font-size:12px;color:#777b86;display:flex;align-items:center;gap:8px;margin:0 0 12px}.breadcrumbs a{color:var(--navy)}.breadcrumbs strong{color:#30333c}.page-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:20px}.page-heading h1{font-size:clamp(25px,3vw,34px);color:#242633;line-height:1.2;letter-spacing:-.5px}.page-heading h1 span{color:var(--navy)}.page-heading p{margin-top:6px;font-size:12px;color:#858995}.catalog-note{font-size:11px;color:#777b86;max-width:430px;text-align:right;line-height:1.6}
+.catalog-layout{display:grid;grid-template-columns:232px minmax(0,1fr);gap:26px;align-items:start}.filter-panel{background:#fff;border:1px solid #e8e9ed;box-shadow:var(--shadow)}.filter-title{padding:15px 16px;border-bottom:1px solid #e9eaee;font-size:14px;font-weight:800;color:#31333a}.filter-search{padding:12px;border-bottom:1px solid #e9eaee}.filter-search label{display:block;font-size:11px;color:#4a4d56;font-weight:700;margin-bottom:7px}.filter-search input{width:100%;height:35px;padding:0 10px;border:1px solid #e0e2e7;border-radius:2px;outline:none;font-size:11px}.filter-search input:focus{border-color:var(--blue);box-shadow:0 0 0 2px rgba(37,132,192,.12)}.filter-group{padding:13px 15px;border-bottom:1px solid #e9eaee}.filter-group h3{font-size:12px;color:#383b44;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}.filter-group h3 span{color:#9b9da5}.filter-options{display:grid;gap:8px}.filter-check{display:flex;align-items:flex-start;gap:8px;font-size:11px;color:#4f525c;cursor:pointer;line-height:1.3}.filter-check input{width:13px;height:13px;margin-top:0;accent-color:var(--blue);flex:0 0 auto}.filter-actions{padding:13px 15px;display:flex;gap:8px}.filter-button{border:0;padding:8px 11px;font-size:11px;font-weight:800;cursor:pointer}.filter-button.primary{background:var(--blue);color:#fff}.filter-button.secondary{background:#fff;color:#454852;border:1px solid #e5e7ed}.filter-button:hover{filter:brightness(.96)}.filter-footnote{padding:0 15px 15px;font-size:10px;color:#838791;line-height:1.55}
+.results-toolbar{height:44px;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:0 14px;background:#fff;border:1px solid #eceef1;box-shadow:var(--shadow);margin-bottom:14px}.view-actions{display:flex;gap:4px}.view-button{border:0;background:transparent;width:24px;height:28px;color:#99a0a6;cursor:pointer;border-radius:3px;display:grid;place-items:center}.view-button.active,.view-button:hover{color:var(--blue)}.view-button svg{width:15px;height:15px;fill:currentColor}.results-count{font-size:11px;color:#555963;margin-right:auto;margin-left:13px}.sort-control{font-size:11px;color:#666}.sort-control select{margin-left:6px;border:1px solid #e1e3e8;background:#fff;height:29px;padding:0 7px;font-size:11px;color:#4d5059;max-width:190px}
+.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}.product-grid.list-view{grid-template-columns:1fr}.product-card{min-width:0;background:#fff;border:1px solid #e9eaed;box-shadow:0 2px 5px rgba(0,0,0,.035);display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}.product-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(7,7,79,.09);border-color:#d5d8e4}.product-visual{height:172px;position:relative;overflow:hidden;background:#fff;border-bottom:1px solid #f0f0f2}.product-visual img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s ease}.product-card:hover .product-visual img{transform:scale(1.035)}.visual-label{position:absolute;right:8px;top:8px;background:rgba(255,255,255,.9);border:1px solid #ebedf0;color:#686c75;font-size:9px;font-weight:800;letter-spacing:.3px;padding:4px 6px}.product-info{padding:12px 12px 10px;display:flex;flex-direction:column;flex:1}.product-family{font-size:9px;color:#858a95;text-transform:uppercase;letter-spacing:.4px;margin-bottom:3px}.product-info h2{font-size:12px;line-height:1.35;font-weight:700;color:#333640;min-height:33px}.product-note{font-size:10px;color:#8a8d95;margin-top:5px}.product-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:12px;padding-top:9px;border-top:1px solid #f0f0f2}.price-request{font-size:11px;font-weight:800;color:#343741}.price-request small{display:block;color:#9699a1;font-size:9px;font-weight:500}.request-button{border:0;background:transparent;color:#9a9da4;display:flex;align-items:center;gap:5px;cursor:pointer;padding:4px;font-size:10px;font-weight:800}.request-button svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.8}.request-button:hover{color:var(--red)}.product-grid.list-view .product-card{display:grid;grid-template-columns:210px minmax(0,1fr)}.product-grid.list-view .product-visual{height:160px;border-right:1px solid #f0f0f2;border-bottom:0}.product-grid.list-view .product-info h2{min-height:0}.empty-state{display:none;padding:35px 20px;text-align:center;background:#fff;border:1px solid #eceef1;color:#747985;font-size:13px}.empty-state strong{display:block;color:var(--navy);font-size:16px;margin-bottom:5px}.listing-disclaimer{margin-top:13px;font-size:10px;line-height:1.6;color:#8a8d95}.bottom-contact{margin-top:24px;padding:20px 23px;background:#fff;border:1px solid #e6e8ed;display:flex;justify-content:space-between;align-items:center;gap:18px}.bottom-contact h2{font-size:17px;color:var(--navy);margin-bottom:4px}.bottom-contact p{font-size:11px;color:#6f7380;max-width:680px}.contact-cta{flex:0 0 auto;display:inline-flex;align-items:center;gap:7px;padding:12px 15px;background:var(--navy);color:#fff;font-size:10px;font-weight:900;text-transform:uppercase}.contact-cta:hover{background:var(--red)}
+/* Inquiry modal */
+#requestModal[hidden]{display:none!important}.request-modal{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:20px}.request-backdrop{position:absolute;inset:0;background:rgba(3,3,41,.72);backdrop-filter:blur(3px)}.request-dialog{position:relative;width:min(570px,100%);max-height:92vh;overflow:auto;background:#fff;box-shadow:0 25px 80px rgba(0,0,0,.3);border-radius:6px}.request-dialog-head{padding:18px 22px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eceef2}.request-dialog-head h2{font-size:18px;color:var(--navy)}.request-close{width:33px;height:33px;border:1px solid #e2e3e8;background:#fff;border-radius:50%;font-size:21px;cursor:pointer;color:#555}.request-dialog-body{padding:21px 22px}.request-dialog-body>p{font-size:12px;color:#777e8a;margin-bottom:16px}.request-product{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid #edf0f5;padding:10px;margin-bottom:16px}.request-product img{width:82px;height:60px;object-fit:cover;background:#fff}.request-product strong{display:block;font-size:12px;color:#343741}.request-product span{display:block;font-size:10px;color:#868a94;margin-top:3px}.request-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.request-field.full{grid-column:1/-1}.request-field label{display:block;font-size:11px;font-weight:800;color:#454954;margin-bottom:5px}.request-field input,.request-field select,.request-field textarea{width:100%;border:1px solid #dfe1e7;min-height:39px;padding:8px 10px;font-size:12px;outline:0;background:#fff}.request-field textarea{resize:vertical;min-height:78px}.request-field input:focus,.request-field select:focus,.request-field textarea:focus{border-color:var(--blue)}.send-request{margin-top:15px;width:100%;border:0;background:var(--red);color:#fff;font-size:11px;font-weight:900;padding:13px;cursor:pointer}.send-request:hover{background:var(--navy)}body.modal-open{overflow:hidden}
+/* SGPR shared footer from marques.html */
+footer{margin-top:auto;position:relative;background:#030329;min-height:110px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:22px}footer:before{content:"";position:absolute;left:0;top:0;width:38%;height:70px;background:var(--light);clip-path:polygon(0 0,100% 0,84% 100%,0 100%)}footer div{position:relative;z-index:1;color:#fff;font-size:20px}
+@media(max-width:1100px){.product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.catalog-layout{grid-template-columns:215px minmax(0,1fr);gap:16px}.product-visual{height:155px}}
+@media(max-width:1000px){.topbar{padding:8px 16px;gap:10px;align-items:flex-start;font-size:11px}.topbar .infos{gap:8px;font-size:11px}.topbar .devis{margin-right:0;white-space:nowrap}.nav{padding-left:0;height:auto;min-height:64px;overflow-x:auto}.nav .logo{position:relative;left:auto;top:auto;width:280px;min-width:280px;height:80px;clip-path:none}.nav .logo img{width:250px}.nav a:not(.logo){padding:0 18px;height:64px;font-size:13px}.nav a.active{height:64px;padding:0 18px!important}.page-shell{width:94%;padding-top:20px}.catalog-layout{grid-template-columns:200px minmax(0,1fr)}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.product-visual{height:160px}.catalog-note{max-width:290px}}
+@media(max-width:700px){.topbar{flex-direction:column}.topbar .infos{gap:7px 12px}.nav .logo{position:relative;left:auto;top:auto;width:150px;min-width:150px;height:64px;clip-path:none}.nav .logo img{width:140px}.nav a:not(.logo){padding:0 10px;font-size:10px}.nav a.active{padding:0 10px!important}.page-heading{align-items:flex-start;flex-direction:column}.catalog-note{text-align:left;max-width:none}.catalog-layout{grid-template-columns:1fr}.filter-panel{order:0}.filter-group.types-filter{display:block}.results-toolbar{flex-wrap:wrap;height:auto;padding:8px 10px}.sort-control{margin-left:auto}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.product-visual{height:135px}.product-info{padding:9px}.product-info h2{font-size:11px}.product-bottom{align-items:flex-start;flex-direction:column}.request-button{padding:0}.product-grid.list-view .product-card{grid-template-columns:125px minmax(0,1fr)}.product-grid.list-view .product-visual{height:145px}.bottom-contact{align-items:flex-start;flex-direction:column;padding:18px}.contact-cta{align-self:flex-start}}
+@media(max-width:450px){.page-shell{width:94%}.product-grid{grid-template-columns:1fr 1fr}.product-visual{height:115px}.results-count{font-size:10px;margin-left:5px}.sort-control select{max-width:125px}.request-fields{grid-template-columns:1fr}.request-field.full{grid-column:auto}.filter-title{padding:12px}.filter-search{padding:10px}.product-grid.list-view .product-card{grid-template-columns:100px minmax(0,1fr)}footer div{font-size:15px}footer:before{width:28%;height:35px}}
+</style>
+<style id="sgpr-unified-chrome">
+/* SGPR — en-tête et pied de page communs à toutes les pages */
+html{scroll-behavior:smooth}
+body{min-height:100vh;display:flex;flex-direction:column}
+body .sgpr-shared-topbar{background:#787269!important;color:#fff!important;width:100%!important;min-height:40px!important;height:40px!important;box-sizing:border-box!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:12px!important;padding:0 7.4% 0 18%!important;font-family:"Ubuntu","Segoe UI",Arial,sans-serif!important;font-size:14px!important;line-height:1.3!important;position:relative!important;z-index:20!important}
+body .sgpr-shared-topbar .infos{display:flex!important;align-items:center!important;gap:30px!important;flex-wrap:wrap!important;font-size:14px!important;line-height:1.3!important;color:#fff!important}
+body .sgpr-shared-topbar .infos span{display:inline-block!important;white-space:nowrap!important}
+body .sgpr-shared-topbar .devis{background:#0a0a5a!important;color:#fff!important;height:40px!important;min-height:40px!important;padding:0 22px!important;margin:0!important;border:0!important;border-radius:0!important;display:flex!important;align-items:center!important;justify-content:center!important;font-weight:700!important;font-size:14px!important;line-height:1!important;white-space:nowrap!important;box-shadow:none!important;transform:none!important;transition:background .2s ease!important}
+body .sgpr-shared-topbar .devis:hover{background:#17177c!important;color:#fff!important}
+body header.sgpr-shared-nav{width:100%!important;height:76px!important;min-height:76px!important;max-height:76px!important;background:#fff!important;display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:0!important;padding:0 0 0 30%!important;position:relative!important;top:auto!important;left:auto!important;right:auto!important;border:0!important;border-bottom:1px solid #eee!important;box-sizing:border-box!important;overflow:visible!important;z-index:15!important;flex:0 0 76px!important}
+body header.sgpr-shared-nav .logo{position:absolute!important;left:0!important;top:0!important;bottom:auto!important;width:28%!important;min-width:0!important;max-width:none!important;height:118px!important;min-height:118px!important;max-height:118px!important;background:#fff!important;display:flex!important;align-items:center!important;justify-content:center!important;z-index:3!important;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;clip-path:polygon(0 0,100% 0,100% 45%,88% 100%,0 100%)!important;flex:none!important}
+body header.sgpr-shared-nav .logo img{display:block!important;width:min(92%,360px)!important;max-width:none!important;min-width:0!important;height:auto!important;max-height:none!important;object-fit:contain!important;margin:0!important;padding:0!important;animation:fadeIn .7s ease both}
+body header.sgpr-shared-nav>a:not(.logo){height:76px!important;min-height:76px!important;max-height:76px!important;padding:0 25px!important;margin:0!important;display:flex!important;align-items:center!important;justify-content:center!important;flex:0 0 auto!important;box-sizing:border-box!important;border:0!important;border-radius:0!important;background:transparent!important;color:#0a0a5a!important;font-family:"Ubuntu","Segoe UI",Arial,sans-serif!important;font-size:14px!important;font-weight:700!important;line-height:1!important;letter-spacing:0!important;text-decoration:none!important;text-transform:uppercase!important;white-space:nowrap!important;transition:background .2s ease,color .2s ease!important}
+body header.sgpr-shared-nav>a:not(.logo):hover,body header.sgpr-shared-nav>a:not(.logo):focus-visible{background:#fff!important;color:#d0110f!important;outline-offset:-3px}
+body header.sgpr-shared-nav>a:not(.logo).active,body header.sgpr-shared-nav>a:not(.logo)[aria-current="page"]{background:#0a0a5a!important;color:#fff!important}
+body header.sgpr-shared-nav>a:not(.logo).active:hover,body header.sgpr-shared-nav>a:not(.logo)[aria-current="page"]:hover{background:#0a0a5a!important;color:#fff!important}
+body footer.sgpr-shared-footer{position:relative!important;isolation:isolate!important;flex:0 0 auto!important;width:100%!important;min-height:110px!important;height:auto!important;margin-top:auto!important;padding:22px!important;box-sizing:border-box!important;display:flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;overflow:hidden!important;background:#030329!important;color:#fff!important;border:0!important;font-family:"Ubuntu","Segoe UI",Arial,sans-serif!important}
+body footer.sgpr-shared-footer:before{content:""!important;position:absolute!important;left:0!important;top:0!important;width:38%!important;height:70px!important;background:#fff!important;clip-path:polygon(0 0,100% 0,84% 100%,0 100%)!important;pointer-events:none!important;z-index:-1!important}
+body footer.sgpr-shared-footer div{position:relative!important;z-index:1!important;color:#fff!important;font-size:20px!important;line-height:1.5!important;font-weight:400!important}
+@media(max-width:1000px){
+ body .sgpr-shared-topbar{height:auto!important;min-height:40px!important;padding:8px 16px!important;gap:10px!important;align-items:flex-start!important;font-size:11px!important;flex-wrap:wrap!important}
+ body .sgpr-shared-topbar .infos{gap:8px 16px!important;font-size:11px!important}
+ body .sgpr-shared-topbar .infos span{white-space:normal!important}
+ body .sgpr-shared-topbar .devis{margin-left:auto!important;height:40px!important;min-height:40px!important;font-size:11px!important}
+ body header.sgpr-shared-nav{padding:0!important;height:auto!important;min-height:64px!important;max-height:none!important;flex:0 0 auto!important;overflow-x:auto!important;overflow-y:hidden!important;justify-content:flex-start!important}
+ body header.sgpr-shared-nav .logo{position:relative!important;left:auto!important;top:auto!important;bottom:auto!important;width:280px!important;min-width:280px!important;height:80px!important;min-height:80px!important;max-height:80px!important;clip-path:none!important;flex:0 0 280px!important}
+ body header.sgpr-shared-nav .logo img{width:250px!important;max-width:250px!important}
+ body header.sgpr-shared-nav>a:not(.logo){height:64px!important;min-height:64px!important;max-height:64px!important;padding:0 18px!important;font-size:13px!important}
+}
+@media(max-width:600px){
+ body .sgpr-shared-topbar{flex-direction:column!important;align-items:flex-start!important;gap:7px!important;padding:9px 16px!important}
+ body .sgpr-shared-topbar .infos{gap:7px 12px!important}
+ body .sgpr-shared-topbar .devis{align-self:flex-end!important;margin-left:0!important}
+ body header.sgpr-shared-nav .logo{width:150px!important;min-width:150px!important;height:64px!important;min-height:64px!important;max-height:64px!important;flex:0 0 150px!important}
+ body header.sgpr-shared-nav .logo img{width:140px!important;max-width:140px!important}
+ body header.sgpr-shared-nav>a:not(.logo){padding:0 10px!important;font-size:10px!important}
+ body footer.sgpr-shared-footer{min-height:85px!important;padding:20px 15px!important}
+ body footer.sgpr-shared-footer:before{width:28%!important;height:35px!important}
+ body footer.sgpr-shared-footer div{font-size:15px!important}
+}
+</style>
+
+<style id="sgpr-catalog-product-search-style">
+.catalog-product-search{display:flex;width:100%;height:42px;margin:0 0 12px;background:#fff;border:1px solid #dfe2e8;border-radius:3px;overflow:hidden;box-shadow:0 2px 7px rgba(7,7,79,.035)}
+.catalog-product-search input{min-width:0;flex:1;border:0;outline:0;padding:0 14px;background:#fff;color:#25262b;font:inherit;font-size:12px}
+.catalog-product-search input::placeholder{color:#9296a0}
+.catalog-product-search input:focus{box-shadow:inset 0 0 0 1px #0a0a5a}
+.catalog-product-search button{flex:0 0 auto;padding:0 20px;border:0;background:#0a0a5a;color:#fff;font-size:11px;font-weight:900;letter-spacing:.3px;cursor:pointer;transition:background .2s ease}
+.catalog-product-search button:hover{background:#d0110f}
+.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+@media(max-width:520px){.catalog-product-search{height:40px}.catalog-product-search input{padding:0 10px;font-size:11px}.catalog-product-search button{padding:0 12px;font-size:10px}}
+</style>
+<style id="sgpr-service-soon-style">
+#sgprServiceSoon[hidden]{display:none!important}
+#sgprServiceSoon{position:fixed;inset:0;z-index:6000;display:grid;place-items:center;padding:22px;isolation:isolate}
+#sgprServiceSoon .service-backdrop{position:absolute;inset:0;background:rgba(5,8,35,.56);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);animation:sgprBackdropIn .24s ease both}
+#sgprServiceSoon .service-dialog{position:relative;z-index:1;width:min(620px,100%);min-height:260px;padding:54px 42px 36px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;border:1px solid rgba(255,255,255,.72);border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.90),rgba(245,247,255,.77));backdrop-filter:blur(26px);-webkit-backdrop-filter:blur(26px);box-shadow:0 30px 100px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.9);text-align:center;animation:sgprDialogIn .35s cubic-bezier(.2,.8,.2,1) both}
+#sgprServiceSoon .service-close{position:absolute;top:13px;right:14px;width:36px;height:36px;border:1px solid rgba(10,10,90,.12);border-radius:50%;background:rgba(255,255,255,.72);color:#0a0a5a;font-size:23px;line-height:1;cursor:pointer;display:grid;place-items:center;transition:transform .2s,background .2s}
+#sgprServiceSoon .service-close:hover{transform:rotate(90deg);background:#fff}
+#sgprLoadingAnimation{width:108px;height:108px;margin:0 auto 8px;display:grid;place-items:center}
+#sgprLoadingAnimation svg{width:100%!important;height:100%!important;overflow:visible}
+#sgprLoadingAnimation .loading-fallback{width:60px;height:60px;border:6px solid rgba(37,132,192,.18);border-top-color:#2584c0;border-right-color:#d0110f;border-radius:50%;animation:sgprSpin .95s linear infinite}
+#sgprServiceSoon h2{max-width:500px;margin:0;color:#0a0a5a;font-size:clamp(25px,4vw,34px);line-height:1.15;text-align:center;letter-spacing:-.5px}
+body.sgpr-service-open{overflow:hidden}
+@keyframes sgprSpin{to{transform:rotate(360deg)}}
+@keyframes sgprBackdropIn{from{opacity:0}to{opacity:1}}
+@keyframes sgprDialogIn{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:520px){#sgprServiceSoon .service-dialog{min-height:220px;padding:48px 20px 28px;border-radius:19px}#sgprLoadingAnimation{width:84px;height:84px}}
+@media(prefers-reduced-motion:reduce){#sgprServiceSoon *,#sgprLoadingAnimation .loading-fallback{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" defer></script>
+</head>
+<body>
+<div class="topbar sgpr-shared-topbar">
+  <div class="infos">
+    <span>✉ sahbigharbi.gpr@gmail.com</span>
+    <span>✆ 55 000 748</span>
+    <span>⚲ 104 Av. de la République – Soliman</span>
+  </div>
+  <a href="devis.html" class="devis">DEMANDER UN DEVIS</a>
+</div>
+<header class="nav sgpr-shared-nav" aria-label="Navigation principale">
+  <a href="index.html" class="logo"><img src="https://raw.githubusercontent.com/subscribpro-dev/AAAA/refs/heads/main/sgpr-logo.png" alt="SGPR"></a>
+  <a href="index.html">Accueil</a>
+  <a href="marques.html">Marques</a>
+  <a href="produits.html" class="active" aria-current="page">Produits</a>
+  <a href="contact.html">Contact</a>
+</header>
+<main class="page-shell">
+  <nav class="breadcrumbs" aria-label="Fil d’Ariane"><a href="index.html">Accueil</a><span>›</span><a href="produits.html">Produits</a><span>›</span><strong id="breadcrumbCategory">Catalogue</strong></nav>
+  <section class="page-heading">
+    <div><h1 id="categoryTitle">Catalogue de pièces</h1><p id="categorySubtitle">Pièces de rechange pour poids lourds et équipements industriels.</p></div>
+    <div class="catalog-note">Les visuels sont illustratifs. La référence exacte, la compatibilité et la disponibilité sont confirmées par SGPR après vérification.</div>
+  </section>
+  <div class="catalog-layout">
+    <aside class="filter-panel" aria-label="Affiner le catalogue">
+      <div class="filter-title">Affiner les résultats</div>
+      <div class="filter-search"><label for="filterSearch">Rechercher dans cette famille</label><input id="filterSearch" type="search" placeholder="Nom de la pièce…"></div>
+      <div class="filter-group types-filter">
+        <h3>Familles de pièces <span>⌃</span></h3>
+        <div class="filter-options" id="categoryFilters"></div>
+      </div>
+      <div class="filter-group">
+        <h3>Marques à préciser <span>⌃</span></h3>
+        <div class="filter-options" id="brandFilters">
+          <label class="filter-check"><input type="checkbox" value="Scania"> Scania</label>
+          <label class="filter-check"><input type="checkbox" value="Renault Trucks"> Renault Trucks</label>
+          <label class="filter-check"><input type="checkbox" value="Iveco"> Iveco</label>
+          <label class="filter-check"><input type="checkbox" value="Isuzu"> Isuzu</label>
+          <label class="filter-check"><input type="checkbox" value="BP"> BP (lubrifiants)</label>
+          <label class="filter-check"><input type="checkbox" value="Clark"> Clark</label>
+          <label class="filter-check"><input type="checkbox" value="TCM"> TCM</label>
+          <label class="filter-check"><input type="checkbox" value="Linde Material Handling"> Linde Material Handling</label>
+        </div>
+      </div>
+      <div class="filter-actions"><button class="filter-button primary" type="button" id="applyFilters">Filtrer</button><button class="filter-button secondary" type="button" id="resetFilters">Réinitialiser</button></div>
+      <p class="filter-footnote">Les marques cochées seront ajoutées au message de demande. Elles ne confirment ni la compatibilité ni la disponibilité.</p>
+    </aside>
+    <section class="results-area" aria-label="Résultats du catalogue">
+      <form class="catalog-product-search" id="catalogProductSearch" role="search">
+        <label class="visually-hidden" for="catalogProductQuery">Rechercher une pièce</label>
+        <input id="catalogProductQuery" type="search" placeholder="Rechercher une pièce…" autocomplete="off">
+        <button type="submit">RECHERCHER</button>
+      </form>
+      <div class="results-toolbar">
+        <div class="view-actions" aria-label="Mode d’affichage"><button class="view-button active" id="gridView" aria-label="Affichage en grille" title="Grille"><svg viewBox="0 0 16 16"><rect x="1" y="1" width="5" height="5" rx=".6"/><rect x="9" y="1" width="5" height="5" rx=".6"/><rect x="1" y="9" width="5" height="5" rx=".6"/><rect x="9" y="9" width="5" height="5" rx=".6"/></svg></button><button class="view-button" id="listView" aria-label="Affichage en liste" title="Liste"><svg viewBox="0 0 16 16"><rect x="1" y="2" width="4" height="4" rx=".6"/><rect x="7" y="2" width="8" height="2" rx=".6"/><rect x="7" y="5" width="8" height="1" rx=".4"/><rect x="1" y="9" width="4" height="4" rx=".6"/><rect x="7" y="9" width="8" height="2" rx=".6"/><rect x="7" y="12" width="8" height="1" rx=".4"/></svg></button></div>
+        <div class="results-count" id="resultsCount" aria-live="polite">Affichage des pièces</div>
+        <label class="sort-control">Trier par <select id="sortProducts"><option value="default">Pertinence</option><option value="az">Nom A–Z</option><option value="za">Nom Z–A</option></select></label>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+      <div class="empty-state" id="emptyState"><strong>Aucun résultat trouvé</strong>Modifiez votre recherche ou réinitialisez les filtres pour afficher les pièces de cette famille.</div>
+      <p class="listing-disclaimer">Catalogue de présentation : les cartes illustrent les types de pièces recherchés et ne représentent pas un stock en temps réel. Les tarifs et références sont communiqués après identification du véhicule ou de l’équipement.</p>
+    </section>
+  </div>
+  <section class="bottom-contact"><div><h2>Vous recherchez une référence précise ?</h2><p>Indiquez la marque, le modèle et la référence de la pièce si vous l’avez. SGPR pourra vérifier la compatibilité, le prix et la disponibilité.</p></div><a class="contact-cta" href="devis.html">Demander un devis&nbsp; ↗</a></section>
+</main>
+<div class="request-modal" id="requestModal" hidden>
+  <div class="request-backdrop" data-close-modal></div>
+  <section class="request-dialog" role="dialog" aria-modal="true" aria-labelledby="requestHeading">
+    <div class="request-dialog-head"><h2 id="requestHeading">Demander cette pièce</h2><button class="request-close" type="button" data-close-modal aria-label="Fermer">×</button></div>
+    <div class="request-dialog-body">
+      <div class="request-product"><img id="requestPhoto" src="assets/products/embrayage-transmission.webp" alt="Illustration de la pièce"><div><strong id="requestProductName">Pièce poids lourd</strong><span id="requestProductCategory">Catalogue SGPR</span></div></div>
+      <p>Complétez les informations connues. Un message sera préparé pour SGPR dans WhatsApp.</p>
+      <form id="requestForm">
+        <div class="request-fields">
+          <div class="request-field full"><label for="vehicleBrandRequest">Marque concernée *</label><select id="vehicleBrandRequest" required><option value="">Choisissez une marque</option><option>Scania</option><option>Renault Trucks</option><option>Iveco</option><option>Isuzu</option><option>BP (lubrifiants)</option><option>Clark</option><option>TCM</option><option>Linde Material Handling</option><option>Autre</option></select></div>
+          <div class="request-field"><label for="vehicleModelRequest">Modèle / gamme *</label><input id="vehicleModelRequest" required placeholder="Modèle ou série"></div>
+          <div class="request-field"><label for="partReferenceRequest">Référence pièce</label><input id="partReferenceRequest" placeholder="Si connue"></div>
+          <div class="request-field full"><label for="requestNotes">Précisions</label><textarea id="requestNotes" placeholder="Année, motorisation, dimensions ou détail utile"></textarea></div>
+        </div>
+        <button class="send-request" type="submit">ENVOYER LA DEMANDE SUR WHATSAPP&nbsp; ↗</button>
+      </form>
+    </div>
+  </section>
+</div>
+<div id="sgprServiceSoon" hidden>
+  <div class="service-backdrop" data-service-close></div>
+  <section class="service-dialog" role="dialog" aria-modal="true" aria-labelledby="sgprServiceHeading">
+    <button class="service-close" type="button" data-service-close aria-label="Fermer la fenêtre">×</button>
+    <div id="sgprLoadingAnimation" aria-label="Animation de chargement"><span class="loading-fallback" aria-hidden="true"></span></div>
+    <h2 id="sgprServiceHeading">Cette fonctionnalité arrive bientôt</h2>
+  </section>
+</div>
+<footer class="sgpr-shared-footer"><div>Copyright © 2026 | SGPR</div></footer>
+<script>
+(function(){
+  const serviceModal = document.getElementById('sgprServiceSoon');
+  let serviceAnimation = null;
+  function openServiceSoon(){
+    if(!serviceModal)return;
+    serviceModal.hidden=false;
+    document.body.classList.add('sgpr-service-open');
+    const animationContainer=document.getElementById('sgprLoadingAnimation');
+    if(animationContainer && !serviceAnimation && window.lottie){
+      animationContainer.innerHTML='';
+      serviceAnimation=window.lottie.loadAnimation({container:animationContainer,renderer:'svg',loop:true,autoplay:true,path:'assets/loading.json',name:'sgpr-service-loading'});
+    }
+    const closeButton=serviceModal.querySelector('.service-close');
+    if(closeButton)closeButton.focus();
+  }
+  function closeServiceSoon(){
+    if(!serviceModal)return;
+    serviceModal.hidden=true;
+    document.body.classList.remove('sgpr-service-open');
+  }
+  if(serviceModal){
+    serviceModal.querySelectorAll('[data-service-close]').forEach(el=>el.addEventListener('click',closeServiceSoon));
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!serviceModal.hidden)closeServiceSoon();});
+  }
+  const categories = {
+    'filtres-filtration': {title:'Filtres & filtration',meta:'Air · huile · carburant',image:'filtres-filtration.webp',types:['Filtre à air poids lourd','Filtre à huile moteur','Préfiltre à carburant','Filtre séparateur d’eau','Cartouche de filtration','Filtre hydraulique','Filtre d’habitacle','Kit de filtres'],photos:['filtres-filtration.webp','filtres-filtration.webp','lubrifiants-fluides.webp','filtres-filtration.webp','filtres-filtration.webp','chariots-elevateurs.webp','cabine-carrosserie.webp','moteur-composants.webp']},
+    'freinage': {title:'Freinage',meta:'Disques · plaquettes · air',image:'freinage.webp',types:['Disque de frein poids lourd','Plaquettes de frein','Kit de freinage','Tambour de frein','Éléments de frein pneumatique','Flexible et raccord de frein','Capteur de freinage','Composants de frein arrière'],photos:['freinage.webp','freinage.webp','freinage.webp','roues-moyeux.webp','freinage.webp','cabine-carrosserie.webp','electricite-demarrage.webp','roues-moyeux.webp']},
+    'moteur-composants': {title:'Moteur & composants',meta:'Joints · pistons · culasses',image:'moteur-composants.webp',types:['Joint de culasse','Piston moteur diesel','Culasse moteur','Kit de joints moteur','Composants internes moteur','Pompe et circuit d’huile','Filtration moteur','Pièces de distribution moteur'],photos:['moteur-composants.webp','moteur-composants.webp','moteur-composants.webp','filtres-filtration.webp','moteur-composants.webp','lubrifiants-fluides.webp','filtres-filtration.webp','distribution-courroies.webp']},
+    'distribution-courroies': {title:'Distribution & courroies',meta:'Courroies · chaînes · tendeurs',image:'distribution-courroies.webp',types:['Courroie d’accessoires','Kit de distribution','Galet tendeur','Chaîne de distribution','Poulies moteur','Kit courroie et tendeur','Composants de distribution','Courroies industrielles'],photos:['distribution-courroies.webp','distribution-courroies.webp','distribution-courroies.webp','distribution-courroies.webp','moteur-composants.webp','distribution-courroies.webp','moteur-composants.webp','distribution-courroies.webp']},
+    'embrayage-transmission': {title:'Embrayage & transmission',meta:'Boîtes · arbres · embrayages',image:'embrayage-transmission.webp',types:['Kit d’embrayage poids lourd','Disque d’embrayage','Mécanisme d’embrayage','Butée d’embrayage','Arbre de transmission','Croisillon de transmission','Composants de boîte de vitesses','Kit de joints de transmission'],photos:['embrayage-transmission.webp','embrayage-transmission.webp','embrayage-transmission.webp','moteur-composants.webp','embrayage-transmission.webp','roues-moyeux.webp','embrayage-transmission.webp','moteur-composants.webp']},
+    'refroidissement-moteur': {title:'Refroidissement moteur',meta:'Radiateurs · pompes à eau',image:'refroidissement-moteur.webp',types:['Radiateur moteur','Pompe à eau','Ventilateur de refroidissement','Thermostat moteur','Échangeur thermique','Durite de refroidissement','Composants de climatisation','Kit de refroidissement'],photos:['refroidissement-moteur.webp','refroidissement-moteur.webp','refroidissement-moteur.webp','moteur-composants.webp','refroidissement-moteur.webp','cabine-carrosserie.webp','refroidissement-moteur.webp','refroidissement-moteur.webp']},
+    'electricite-demarrage': {title:'Électricité & démarrage',meta:'Démarreurs · alternateurs',image:'electricite-demarrage.webp',types:['Démarreur poids lourd','Alternateur','Capteur moteur','Faisceau électrique','Composants électriques','Relais et connecteurs','Éléments de démarrage','Accessoires électriques'],photos:['electricite-demarrage.webp','electricite-demarrage.webp','electricite-demarrage.webp','cabine-carrosserie.webp','electricite-demarrage.webp','electricite-demarrage.webp','electricite-demarrage.webp','electricite-demarrage.webp']},
+    'suspension-direction': {title:'Suspension & direction',meta:'Amortisseurs · rotules · essieux',image:'suspension-direction.webp',types:['Amortisseur poids lourd','Rotule de direction','Ressort de suspension','Composants d’essieu','Biellette de direction','Silentbloc et fixation','Composants de suspension','Pièces de direction'],photos:['suspension-direction.webp','suspension-direction.webp','suspension-direction.webp','roues-moyeux.webp','suspension-direction.webp','suspension-direction.webp','suspension-direction.webp','roues-moyeux.webp']},
+    'cabine-carrosserie': {title:'Cabine & carrosserie',meta:'Rétroviseurs · éléments extérieurs',image:'cabine-carrosserie.webp',types:['Rétroviseur de camion','Marchepied de cabine','Poignée et serrure','Éléments de carrosserie','Accessoires de cabine','Feux et éléments extérieurs','Panneaux et fixations','Éléments de finition'],photos:['cabine-carrosserie.webp','cabine-carrosserie.webp','cabine-carrosserie.webp','cabine-carrosserie.webp','cabine-carrosserie.webp','eclairage-signalisation.webp','cabine-carrosserie.webp','cabine-carrosserie.webp']},
+    'eclairage-signalisation': {title:'Éclairage & signalisation',meta:'Phares · feux · ampoules',image:'eclairage-signalisation.webp',types:['Bloc optique avant','Feu arrière poids lourd','Clignotant','Ampoule et éclairage','Éclairage de cabine','Feu de gabarit','Éléments de signalisation','Connectique d’éclairage'],photos:['eclairage-signalisation.webp','eclairage-signalisation.webp','eclairage-signalisation.webp','eclairage-signalisation.webp','cabine-carrosserie.webp','eclairage-signalisation.webp','eclairage-signalisation.webp','electricite-demarrage.webp']},
+    'roues-moyeux': {title:'Roues & moyeux',meta:'Roulements · moyeux · fixations',image:'roues-moyeux.webp',types:['Moyeu de roue poids lourd','Roulement de roue','Kit de fixation','Jante et composants','Goujons et écrous','Composants de moyeu','Kit roulement','Pièces de roue'],photos:['roues-moyeux.webp','roues-moyeux.webp','roues-moyeux.webp','roues-moyeux.webp','roues-moyeux.webp','roues-moyeux.webp','roues-moyeux.webp','roues-moyeux.webp']},
+    'lubrifiants-fluides': {title:'Lubrifiants & fluides',meta:'Huiles · graisses · liquides',image:'lubrifiants-fluides.webp',types:['Huile moteur diesel','Huile de transmission','Graisse technique','Liquide de refroidissement','Fluide hydraulique','Lubrifiant multi-usage','Liquide de frein','Produits d’entretien'],photos:['lubrifiants-fluides.webp','lubrifiants-fluides.webp','lubrifiants-fluides.webp','refroidissement-moteur.webp','lubrifiants-fluides.webp','lubrifiants-fluides.webp','lubrifiants-fluides.webp','lubrifiants-fluides.webp']},
+    'chariots-elevateurs': {title:'Pièces de chariots élévateurs',meta:'Clark · TCM · Linde',image:'chariots-elevateurs.webp',types:['Filtration pour chariot','Pièces hydrauliques','Roues et galets','Composants de mât','Pièces de transmission','Éléments électriques','Freinage de chariot','Accessoires de manutention'],photos:['chariots-elevateurs.webp','chariots-elevateurs.webp','roues-moyeux.webp','chariots-elevateurs.webp','embrayage-transmission.webp','electricite-demarrage.webp','freinage.webp','chariots-elevateurs.webp']}
+  };
+  const categoryKeys = Object.keys(categories);
+  const params = new URLSearchParams(location.search);
+  let slug = params.get('category') || 'embrayage-transmission';
+  if(!categories[slug]) slug = 'embrayage-transmission';
+  const cat = categories[slug];
+  document.title = cat.title + ' – Catalogue SGPR';
+  document.getElementById('categoryTitle').innerHTML = '<span>'+cat.title+'</span>';
+  document.getElementById('categorySubtitle').textContent = cat.meta + ' — sélectionnez une pièce pour préciser votre demande.';
+  document.getElementById('breadcrumbCategory').textContent = cat.title;
+  const grid = document.getElementById('productGrid');
+  const categoryFilters = document.getElementById('categoryFilters');
+  const search = document.getElementById('filterSearch');
+  const productSearchForm = document.getElementById('catalogProductSearch');
+  const productSearch = document.getElementById('catalogProductQuery');
+  const brandInputs = [...document.querySelectorAll('#brandFilters input')];
+  const empty = document.getElementById('emptyState');
+  const count = document.getElementById('resultsCount');
+  const sort = document.getElementById('sortProducts');
+  const initialQuery = params.get('q') || '';
+  if(initialQuery){ productSearch.value=initialQuery; search.value=initialQuery; }
+  const selectedTypes = new Set();
+  let chosenBrands=[];
+  let currentProduct = null;
+  const escapeHtml = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  cat.types = cat.types || cat.types;
+  cat.types.forEach((name,i)=>{
+    const label=document.createElement('label'); label.className='filter-check';
+    const cb=document.createElement('input'); cb.type='checkbox'; cb.value=name; cb.addEventListener('change',()=>{if(cb.checked)selectedTypes.add(name);else selectedTypes.delete(name);render();});
+    label.append(cb,document.createTextNode(name)); categoryFilters.appendChild(label);
+  });
+  const products=cat.types.map((name,i)=>({name,photo:'assets/products/'+cat.photos[i],family:cat.title,detail:'Référence à identifier selon le véhicule',tags:name.toLocaleLowerCase('fr')}));
+  const normalizeSearch = value => String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('fr').replace(/[’']/g,' ').replace(/[^a-z0-9]+/g,' ').trim();
+  const searchStopWords = new Set(['a','au','aux','de','du','des','la','le','les','un','une','pour','et','en','sur','poids','lourd','lourds','piece','pieces']);
+  function matchesProductQuery(haystack, query){
+    const tokens=normalizeSearch(query).split(/\s+/).filter(t=>t.length>1&&!searchStopWords.has(t));
+    const blob=normalizeSearch(haystack);
+    return !tokens.length || tokens.every(token=>blob.includes(token));
+  }
+  function render(){
+    let visible=products.filter(p=>{
+      const q=search.value.trim();
+      const matchesSearch=!q||matchesProductQuery(p.name+' '+p.family+' '+p.detail+' '+p.tags,q);
+      const matchesType=!selectedTypes.size||selectedTypes.has(p.name);
+      return matchesSearch&&matchesType;
+    });
+    if(sort.value==='az')visible.sort((a,b)=>a.name.localeCompare(b.name,'fr'));
+    if(sort.value==='za')visible.sort((a,b)=>b.name.localeCompare(a.name,'fr'));
+    grid.innerHTML=visible.map((p,i)=>`<article class="product-card">
+      <div class="product-visual"><img src="${p.photo}" alt="Illustration : ${escapeHtml(p.name)}" loading="lazy"><span class="visual-label">PHOTO ILLUSTRATIVE</span></div>
+      <div class="product-info"><div class="product-family">${escapeHtml(p.family)}</div><h2>${escapeHtml(p.name)}</h2><p class="product-note">${escapeHtml(p.detail)}</p><div class="product-bottom"><div class="price-request">Prix sur demande<small>Disponibilité à confirmer</small></div><button class="request-button" type="button" data-product-index="${products.indexOf(p)}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 1.9-1.4L22 9H7"/><circle cx="10" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg> DEMANDER</button></div></div>
+    </article>`).join('');
+    count.textContent='Affichage de '+visible.length+' sur '+products.length+' types de pièces';
+    empty.style.display=visible.length?'none':'block';
+    grid.style.display=visible.length?'grid':'none';
+    grid.querySelectorAll('[data-product-index]').forEach(btn=>btn.addEventListener('click',()=>openRequest(products[Number(btn.dataset.productIndex)])));
+  }
+  function openRequest(product){currentProduct=product;document.getElementById('requestProductName').textContent=product.name;document.getElementById('requestProductCategory').textContent=cat.title;document.getElementById('requestPhoto').src=product.photo;document.getElementById('requestPhoto').alt='Illustration de '+product.name;document.getElementById('requestModal').hidden=false;document.body.classList.add('modal-open');document.getElementById('vehicleBrandRequest').focus();}
+  function closeRequest(){document.getElementById('requestModal').hidden=true;document.body.classList.remove('modal-open');}
+  document.querySelectorAll('[data-close-modal]').forEach(el=>el.addEventListener('click',closeRequest));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!document.getElementById('requestModal').hidden)closeRequest();});
+  document.getElementById('requestForm').addEventListener('submit',e=>{
+    e.preventDefault(); const brand=document.getElementById('vehicleBrandRequest').value; const model=document.getElementById('vehicleModelRequest').value.trim(); const reference=document.getElementById('partReferenceRequest').value.trim(); const notes=document.getElementById('requestNotes').value.trim();
+    let message='Bonjour SGPR, je souhaite demander le prix et la disponibilité de : '+currentProduct.name+' (catégorie '+cat.title+'). Marque du véhicule/équipement : '+brand+' ; Modèle/gamme : '+model;
+    if(reference)message+=' ; Référence connue : '+reference; if(chosenBrands.length)message+=' ; Marques sélectionnées dans le filtre : '+chosenBrands.join(', '); if(notes)message+=' ; Précisions : '+notes; message+='. Merci de vérifier la compatibilité et la disponibilité.';
+    window.open('https://wa.me/21655000748?text='+encodeURIComponent(message),'_blank','noopener');
+  });
+  document.getElementById('applyFilters').addEventListener('click',()=>{chosenBrands=brandInputs.filter(x=>x.checked).map(x=>x.value);render();});
+  document.getElementById('resetFilters').addEventListener('click',()=>{search.value='';if(productSearch)productSearch.value='';selectedTypes.clear();chosenBrands=[];brandInputs.forEach(x=>x.checked=false);categoryFilters.querySelectorAll('input').forEach(x=>x.checked=false);sort.value='default';render();});
+  search.addEventListener('input',()=>{if(productSearch)productSearch.value=search.value;render();});
+  if(productSearchForm)productSearchForm.addEventListener('submit',e=>{e.preventDefault();openServiceSoon();});
+  // La recherche principale n'est pas encore disponible : ne pas filtrer la grille à la saisie.
+  if(productSearch)productSearch.addEventListener('input',()=>{});
+  sort.addEventListener('change',render);
+  document.getElementById('gridView').addEventListener('click',()=>{grid.classList.remove('list-view');document.getElementById('gridView').classList.add('active');document.getElementById('listView').classList.remove('active');});
+  document.getElementById('listView').addEventListener('click',()=>{grid.classList.add('list-view');document.getElementById('listView').classList.add('active');document.getElementById('gridView').classList.remove('active');});
+  render();
+})();
+</script>
+</body>
+</html>

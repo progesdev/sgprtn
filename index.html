@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<link rel="icon" type="image/svg+xml" href="https://github.com/progesdev/sgpr/blob/main/camion.png?raw=true">
+<link rel="shortcut icon" href="https://github.com/progesdev/sgpr/blob/main/camion.png?raw=true">
+<meta name="theme-color" content="#07074f"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accueil – SGPR | Pièces de Rechange pour Camions et Poids Lourds</title>
+<style>
+:root{--navy:#07074f;--navy2:#0e1268;--grey:#787269;--red:#d81917;--light:#f6f7fb;--text:#25262b;--muted:#70727a;--white:#fff;--line:#e7e8ee;--shadow:0 18px 50px rgba(7,7,79,.09)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{min-height:100vh;display:flex;flex-direction:column;font-family:"Ubuntu","Segoe UI",Arial,sans-serif;background:var(--light);color:var(--text);line-height:1.5}a{text-decoration:none;color:inherit}
+.topbar{background:var(--grey);min-height:40px;display:flex;align-items:center;justify-content:space-between;padding-left:18%;font-size:14px;color:#fff}.topbar .infos{display:flex;gap:30px;flex-wrap:wrap}.topbar .devis{background:var(--navy);height:40px;padding:0 22px;display:flex;align-items:center;font-weight:700;margin-right:9%;transition:.25s}.topbar .devis:hover{background:#17177c}
+.nav{height:76px;background:#fff;display:flex;align-items:center;padding-left:30%;position:relative;border-bottom:1px solid #eee;z-index:10}.nav a:not(.logo){padding:0 25px;font-weight:700;font-size:14px;color:var(--navy);text-transform:uppercase;transition:.25s}.nav a:not(.logo):hover,.nav a:not(.logo):focus{color:var(--red)}
+.social-links{margin-left:auto;padding:0 30px 0 12px;display:flex;align-items:center;gap:7px;flex:0 0 auto}
+.social-link{width:34px;height:34px;padding:0!important;border:1.5px solid var(--navy);border-radius:6px;display:grid!important;place-items:center;color:var(--navy)!important;background:#fff;transition:background .2s ease,color .2s ease,transform .2s ease,border-color .2s ease}
+.social-link svg{width:17px;height:17px;display:block;fill:currentColor;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.social-link:hover,.social-link:focus-visible{background:var(--navy);color:#fff!important;border-color:var(--navy);transform:translateY(-2px)}
+.nav a.active{
+  color:#fff!important;
+  background:var(--navy);
+  border:0;
+  border-radius:0;
+  padding:0 25px!important;
+  height:76px;
+  display:flex;
+  align-items:center;
+}
+.nav a.active:hover,.nav a.active:focus-visible{
+  color:#fff!important;
+  background:var(--navy);
+}
+
+.logo{position:absolute;left:0;top:0;width:28%;height:118px;background:#fff;display:flex;align-items:center;justify-content:center;z-index:2;clip-path:polygon(0 0,100% 0,100% 45%,88% 100%,0 100%)}.logo img{width:min(92%,360px);height:auto;animation:fadeIn .7s ease both}
+.page{padding:0 0 80px}.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--navy) 0%,#10147a 60%,#191c91 100%);color:#fff;padding:78px 6% 70px}.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.05);pointer-events:none}.hero:before{width:420px;height:420px;right:-100px;top:-180px}.hero:after{width:260px;height:260px;left:-100px;bottom:-150px}.hero-inner{max-width:1100px;margin:auto;position:relative;z-index:1;display:grid;grid-template-columns:1.3fr .7fr;gap:55px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;font-size:12px;letter-spacing:2px;font-weight:800;color:#fff;margin-bottom:18px}.eyebrow:before{content:"";width:35px;height:3px;background:var(--red)}.hero h1{font-size:clamp(38px,5vw,64px);line-height:1.03;margin-bottom:22px;letter-spacing:-1.5px}.hero h1 span{color:#ff4946}.hero p{max-width:690px;font-size:18px;line-height:1.8;color:#e7e8ff}.hero-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(8px);padding:30px;border-radius:18px;box-shadow:0 20px 45px rgba(0,0,0,.12)}.hero-card strong{display:block;font-size:34px}.hero-card small{display:block;color:#dfe1ff;margin-top:5px}
+.container{max-width:1100px;margin:auto;padding:0 6%}.stats{margin-top:-35px;position:relative;z-index:3;display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-radius:18px;box-shadow:var(--shadow);overflow:hidden}.stat{padding:28px 22px;text-align:center;border-right:1px solid var(--line)}.stat:last-child{border-right:0}.stat strong{display:block;font-size:35px;color:var(--navy);line-height:1;margin-bottom:7px}.stat span{font-size:13px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.5px}.section{padding-top:78px}.section-head{text-align:center;max-width:700px;margin:0 auto 42px}.section-head .tag{color:var(--red);font-size:12px;text-transform:uppercase;font-weight:800;letter-spacing:2px}.section-head h2{font-size:36px;color:var(--navy);margin:8px 0 12px}.section-head p{color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:25px}.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:35px;box-shadow:0 10px 35px rgba(7,7,79,.05)}.panel h3{font-size:22px;color:var(--navy);margin-bottom:14px}.panel p{color:#555;line-height:1.8}.check-list{display:grid;gap:13px;margin-top:22px}.check{display:flex;gap:12px;align-items:flex-start;padding:14px 15px;background:#f7f8fc;border-radius:10px}.check i{width:24px;height:24px;border-radius:50%;background:#e8e9ff;color:var(--navy);display:grid;place-items:center;font-style:normal;font-weight:900;flex:0 0 24px}.check b{color:#30313a}.check span{display:block;color:#70727a;font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.service{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;transition:.3s;box-shadow:0 8px 30px rgba(7,7,79,.04)}.service:hover{transform:translateY(-7px);box-shadow:0 18px 40px rgba(7,7,79,.11)}.icon{width:54px;height:54px;border-radius:14px;background:#eef0ff;color:var(--navy);display:grid;place-items:center;font-size:25px;margin-bottom:20px}.service h3{color:var(--navy);font-size:20px;margin-bottom:10px}.service p{color:var(--muted);font-size:15px;line-height:1.7}
+.brands{background:#fff;border-radius:20px;padding:35px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between;gap:25px}.brands-text{max-width:360px}.brands-text h3{color:var(--navy);font-size:25px;margin-bottom:8px}.brands-text p{color:var(--muted)}.brand-pills{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px}.pill{padding:10px 14px;border:1px solid #dddff0;border-radius:30px;color:var(--navy);font-weight:800;font-size:13px;background:#fafaff}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.review{background:#fff;border:1px solid var(--line);border-radius:16px;padding:27px;position:relative;box-shadow:0 8px 30px rgba(7,7,79,.04)}.stars{color:#e2a800;letter-spacing:2px;margin-bottom:14px}.review p{font-style:italic;color:#555;line-height:1.75;margin-bottom:20px}.review small{font-weight:800;color:var(--navy)}.review em{display:block;color:#9a9ba2;font-style:normal;font-size:12px;margin-top:2px}.notice{margin-top:18px;font-size:12px;color:#92939a;text-align:center}
+.cta{margin-top:78px;background:linear-gradient(135deg,var(--navy),#151a83);color:#fff;border-radius:20px;padding:38px 42px;display:flex;align-items:center;justify-content:space-between;gap:25px;box-shadow:0 20px 45px rgba(7,7,79,.15)}.cta h2{font-size:28px;margin-bottom:6px}.cta p{color:#dfe1ff}.btn{padding:14px 24px;font-weight:800;text-transform:uppercase;background:#fff;color:var(--navy);border-radius:7px;transition:.25s;white-space:nowrap}.btn:hover{transform:translateY(-3px);box-shadow:0 12px 25px rgba(0,0,0,.18)}
+
+/* ===== FOOTER SGPR — STRUCTURE ET POSITIONNEMENT CORRIGÉS ===== */
+html{min-height:100%;}
+body{min-height:100vh;display:flex;flex-direction:column;margin:0;}
+footer{
+    position:relative;
+    isolation:isolate;
+    flex:0 0 auto;
+    width:100%;
+    min-height:99px;
+    margin-top:auto;
+    padding:25px 20px;
+    box-sizing:border-box;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    overflow:hidden;
+    background:#030329;
+}
+footer::before{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    left:0;
+    top:0;
+    width:38%;
+    height:63px;
+    background:#f6f7fb;
+    clip-path:polygon(0 0,100% 0,84% 100%,0 100%);
+    pointer-events:none;
+}
+footer div{
+    position:relative;
+    z-index:1;
+    color:#fff;
+    font-size:18px;
+    line-height:1.5;
+}
+@media(max-width:600px){
+    footer{min-height:85px;padding:20px 15px;}
+    footer::before{width:28%;height:35px;}
+    footer div{font-size:15px;}
+}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.anim{opacity:0;animation:fadeUp .7s ease forwards}.d1{animation-delay:.12s}.d2{animation-delay:.24s}.d3{animation-delay:.36s}.d4{animation-delay:.48s}
+@media(max-width:1000px){.social-links{padding-right:16px;gap:6px}.social-link{width:32px;height:32px}
+.topbar{padding:8px 16px;gap:10px;align-items:flex-start}.topbar .infos{gap:8px;font-size:11px}.topbar .devis{margin-right:0;white-space:nowrap}.nav{padding-left:0;height:auto;min-height:64px;overflow-x:auto}.logo{position:relative;width:280px;min-width:280px;height:80px;clip-path:none}.logo img{width:250px}.nav a:not(.logo){padding:0 18px;white-space:nowrap}.hero-inner{grid-template-columns:1fr}.hero{padding:55px 6%}.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}.about-grid,.cards,.reviews{grid-template-columns:1fr}.brands{flex-direction:column;align-items:flex-start}.brand-pills{justify-content:flex-start}.cta{flex-direction:column;align-items:flex-start}}
+@media(max-width:600px){.stats{margin:20px 6% 0}.stat{padding:23px 12px}.stat strong{font-size:29px}.hero h1{font-size:40px}.hero p{font-size:16px}.section{padding-top:58px}.section-head h2{font-size:30px}.panel,.service,.review{padding:23px}.brands{padding:25px}.cta{padding:30px 24px}.cta h2{font-size:24px}}
+
+/* Carousel d'accueil */
+.home-carousel{position:relative;overflow:hidden;background:#08085a;color:#fff}
+.carousel-track{display:flex;transition:transform .6s ease;width:300%}
+.slide{width:33.333333%;flex:0 0 33.333333%;position:relative}
+.slide img{width:100%;height:520px;display:block;object-fit:cover}
+.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:48px;height:48px;border:0;border-radius:50%;background:rgba(255,255,255,.92);color:#08085a;font-size:28px;cursor:pointer;box-shadow:0 8px 25px rgba(0,0,0,.18)}
+.carousel-btn.prev{left:28px}.carousel-btn.next{right:28px}.carousel-dots{position:absolute;bottom:18px;left:0;right:0;display:flex;justify-content:center;gap:8px;z-index:3}.dot{width:9px;height:9px;border-radius:50%;border:0;background:rgba(255,255,255,.5);cursor:pointer}.dot.active{background:#fff;transform:scale(1.25)}
+.presentation-content{background:var(--light);padding-bottom:1px}.presentation-content .hero{display:none}
+@media(max-width:700px){.slide img{height:360px}.carousel-btn{width:40px;height:40px;font-size:22px}.carousel-btn.prev{left:12px}.carousel-btn.next{right:12px}}
+.presentation-content{--navy:#0b1d36;--navy-dark:#071528;--yellow:#f5b900;--white:#fff;--light:#f5f7fa;--gray:#667085;--border:#e7ebf0}
+.about-hero{position:relative;overflow:hidden;padding:110px 0 120px;background:radial-gradient(circle at 85% 20%,rgba(245,185,0,.08),transparent 30%),#fff}
+.hero-grid{display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:90px}
+.hero-content h1{font-size:clamp(48px,6vw,82px);line-height:.98;letter-spacing:-3px;font-weight:500;color:var(--navy);margin-bottom:28px}
+.hero-content h1 strong{font-weight:800}
+.hero-content h2{font-size:23px;line-height:1.4;max-width:540px;margin-bottom:20px}
+.hero-content p{max-width:560px;color:var(--gray);font-size:16px;line-height:1.9}
+.hero-line{width:100px;height:5px;background:var(--yellow);margin-top:35px;border-radius:10px}
+.hero-visual{position:relative}
+.image-wrapper{position:relative;padding:20px 0 20px 20px}
+.image-wrapper img{position:relative;z-index:2;width:100%;height:480px;object-fit:cover;border-radius:8px;box-shadow:0 30px 70px rgba(7,21,40,.18)}
+.yellow-shape{position:absolute;width:220px;height:220px;right:-35px;top:-35px;background:var(--yellow);z-index:1}
+.experience-box{position:absolute;z-index:3;left:-10px;bottom:0;background:var(--navy);color:#fff;padding:22px 30px;min-width:210px;box-shadow:0 15px 35px rgba(7,21,40,.2)}
+.experience-box strong{display:block;color:var(--yellow);font-size:25px;font-weight:800;margin-bottom:4px}
+.experience-box span{font-size:11px;text-transform:uppercase;letter-spacing:1.5px}
+
+.identity{padding:120px 0;background:var(--light)}
+.identity-header{max-width:760px;margin-bottom:65px}
+.identity-header h2{font-size:clamp(38px,4vw,56px);line-height:1.1;letter-spacing:-2px;margin-bottom:25px}
+.identity-header h2 strong{font-weight:800}
+.identity-header p{color:var(--gray);font-size:15px;line-height:1.8;max-width:700px;margin-bottom:10px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service-card{position:relative;min-height:350px;padding:35px;background:#fff;border:1px solid var(--border);overflow:hidden;transition:transform .35s ease,box-shadow .35s ease}
+.service-card:hover{transform:translateY(-8px);box-shadow:0 20px 45px rgba(7,21,40,.12)}
+.dark-card{background:var(--navy);border-color:var(--navy);color:#fff}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start}
+.card-number{font-size:12px;font-weight:700;letter-spacing:2px;color:var(--yellow)}
+.service-icon{width:58px;height:58px;display:flex;align-items:center;justify-content:center;background:var(--yellow);color:var(--navy);font-size:22px;border-radius:50%}
+.card-content{position:absolute;left:35px;right:35px;bottom:70px}
+.card-content h3{font-size:22px;margin-bottom:15px}
+.card-content p{font-size:14px;line-height:1.8;color:var(--gray)}
+.dark-card .card-content p{color:#b9c3d1}
+.card-arrow{position:absolute;left:35px;bottom:28px;color:var(--yellow);font-size:16px}
+
+.commitments{padding:115px 0;background:var(--navy);color:#fff}
+.commitments-heading{display:grid;grid-template-columns:1fr .7fr;align-items:end;gap:80px;margin-bottom:65px}
+.commitments-heading h2{font-size:clamp(38px,4vw,54px);line-height:1.1;letter-spacing:-2px}
+.commitments-heading h2 strong{font-weight:800}
+.commitments-heading>p{color:#b9c3d1;font-size:15px;line-height:1.9;padding-bottom:5px}
+.commitments-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.15)}
+.commitment{position:relative;padding:42px 35px;min-height:300px;background:var(--navy)}
+.commitment-number{color:var(--yellow);font-size:13px;font-weight:700;letter-spacing:2px;margin-bottom:50px}
+.commitment-icon{width:58px;height:58px;display:flex;align-items:center;justify-content:center;background:rgba(245,185,0,.12);border:1px solid rgba(245,185,0,.4);color:var(--yellow);border-radius:50%;font-size:20px;margin-bottom:25px}
+.commitment h3{font-size:22px;margin-bottom:12px}
+.commitment p{max-width:300px;color:#b9c3d1;font-size:14px;line-height:1.8}
+
+.final-section{padding:80px 0;background:var(--light)}
+.final-box{display:grid;grid-template-columns:1fr .7fr;align-items:center;gap:50px;padding:65px;background:var(--yellow)}
+.final-box span{display:block;font-size:12px;font-weight:800;letter-spacing:3px;margin-bottom:15px}
+.final-box h2{font-size:clamp(36px,4vw,52px);line-height:1.05;letter-spacing:-2px;color:var(--navy)}
+.final-text p{color:var(--navy);font-size:15px;line-height:1.7;margin-bottom:25px}
+.contact-button{display:inline-flex;align-items:center;gap:15px;padding:15px 22px;background:var(--navy);color:#fff;font-size:13px;font-weight:700;transition:.3s}
+.contact-button:hover{background:var(--navy-dark);transform:translateX(4px)}
+
+@media(max-width:1000px){
+.hero-grid{grid-template-columns:1fr;gap:60px}
+.hero-content{max-width:750px}
+.image-wrapper img{height:420px}
+.services-grid{grid-template-columns:1fr 1fr}
+.service-card:last-child{grid-column:1/-1}
+.commitments-heading{grid-template-columns:1fr;gap:25px}
+.commitments-grid{grid-template-columns:1fr}
+.commitment{min-height:auto}
+.final-box{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+.container{width:88%}
+.about-hero{padding:75px 0 90px}
+.hero-content h1{font-size:52px;letter-spacing:-2px}
+.hero-content h2{font-size:20px}
+.image-wrapper{padding:10px 0 10px 10px}
+.image-wrapper img{height:320px}
+.yellow-shape{width:130px;height:130px;right:-15px;top:-15px}
+.experience-box{left:-5px;padding:17px 20px;min-width:175px}
+.identity{padding:80px 0}
+.identity-header{margin-bottom:45px}
+.identity-header h2{font-size:38px}
+.services-grid{grid-template-columns:1fr}
+.service-card:last-child{grid-column:auto}
+.service-card{min-height:330px}
+.commitments{padding:80px 0}
+.commitments-heading h2{font-size:38px}
+.commitment{padding:35px 25px}
+.final-section{padding:50px 0}
+.final-box{padding:40px 25px}
+.final-box h2{font-size:38px}
+}
+
+</style>
+<style>
+.sgpr-avis-image{display:block;width:100%;max-width:750px;height:auto;margin:0 auto;}
+</style>
+
+
+<style>
+.sgpr-users-review{
+  width:min(100%, 920px);
+  margin:42px auto 10px;
+  border-radius:22px;
+  overflow:hidden;
+  background:#f1f1f1;
+  box-shadow:0 18px 45px rgba(10,16,35,.12);
+}
+.sgpr-users-review__top{
+  background:#f5da00;
+  padding:38px 28px 88px;
+  text-align:center;
+}
+.sgpr-users-review__top h3{
+  margin:0;
+  color:#111;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:34px;
+  line-height:1.15;
+  font-weight:800;
+}
+.sgpr-users-review__cards{
+  margin:-62px 34px 0;
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  padding-bottom:34px;
+}
+.sgpr-user-card{
+  min-height:300px;
+  background:#fff;
+  border-radius:9px;
+  padding:24px 18px 20px;
+  box-shadow:0 5px 16px rgba(0,0,0,.07);
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+.sgpr-user-card__text{
+  color:#a0a0a0;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:13px;
+  line-height:1.75;
+  min-height:102px;
+}
+.sgpr-avatar{
+  width:96px;
+  height:96px;
+  margin:8px auto 18px;
+  border-radius:50%;
+  position:relative;
+  overflow:hidden;
+  background:#e8e8e8;
+}
+.sgpr-avatar:before{
+  content:"";
+  position:absolute;
+  width:35px;
+  height:35px;
+  left:31px;
+  top:16px;
+  border-radius:50%;
+  background:#d59b72;
+  z-index:2;
+}
+.sgpr-avatar:after{
+  content:"";
+  position:absolute;
+  width:66px;
+  height:48px;
+  left:15px;
+  bottom:-7px;
+  border-radius:48% 48% 10% 10%;
+  background:#233b63;
+}
+.sgpr-avatar span{
+  position:absolute;
+  z-index:3;
+  width:42px;
+  height:22px;
+  left:27px;
+  top:9px;
+  border-radius:50% 50% 35% 35%;
+  background:#3a2a24;
+}
+.sgpr-avatar--one:after{background:#8d4c35}
+.sgpr-avatar--one span{background:#30221f;box-shadow:10px 3px 0 #30221f,-10px 3px 0 #30221f}
+.sgpr-avatar--two:after{background:#17233c}
+.sgpr-avatar--two span{background:#2c2928}
+.sgpr-avatar--three:after{background:#2f343b}
+.sgpr-avatar--three span{background:#4b3023}
+.sgpr-user-card__name{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:14px;
+  font-weight:700;
+  color:#666;
+  margin-bottom:4px;
+}
+.sgpr-user-card__role{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:13px;
+  color:#777;
+}
+@media(max-width:700px){
+  .sgpr-users-review__top{padding:30px 18px 76px}
+  .sgpr-users-review__top h3{font-size:27px}
+  .sgpr-users-review__cards{
+    grid-template-columns:1fr;
+    margin:-50px 18px 0;
+    gap:16px;
+  }
+  .sgpr-user-card{min-height:250px}
+}
+</style>
+
+
+<style>
+.sgpr-counter{
+  display:inline-block;
+  min-width:1ch;
+  font-variant-numeric:tabular-nums;
+}
+.sgpr-counter.is-counting{
+  animation:sgprCounterPop .55s ease both;
+}
+@keyframes sgprCounterPop{
+  0%{opacity:.25;transform:translateY(8px) scale(.94)}
+  70%{opacity:1;transform:translateY(0) scale(1.04)}
+  100%{transform:translateY(0) scale(1)}
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var counters = document.querySelectorAll('.sgpr-counter');
+  if (!counters.length) return;
+
+  function animateCounter(el) {
+    if (el.getAttribute('data-done') === '1') return;
+    el.setAttribute('data-done', '1');
+
+    var target = parseInt(el.getAttribute('data-target'), 10) || 0;
+    var suffix = el.getAttribute('data-suffix') || '';
+    var duration = 1500;
+    var startTime = null;
+
+    el.classList.add('is-counting');
+
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var progress = Math.min((timestamp - startTime) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      var value = Math.floor(target * eased);
+
+      el.textContent = value + suffix;
+
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      } else {
+        el.textContent = target + suffix;
+      }
+    }
+
+    window.requestAnimationFrame(step);
+  }
+
+  function startVisibleCounters() {
+    counters.forEach(function (el) {
+      var rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        animateCounter(el);
+      }
+    });
+  }
+
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    counters.forEach(function (el) {
+      observer.observe(el);
+    });
+  } else {
+    counters.forEach(animateCounter);
+  }
+
+  setTimeout(startVisibleCounters, 200);
+});
+</script>
+
+<style>
+.sgprp-youtube-fallback{
+  display:none;position:absolute;left:50%;bottom:28px;transform:translateX(-50%);
+  z-index:4;padding:11px 16px;border-radius:10px;background:rgba(216,25,23,.95);
+  color:#fff;font-size:12px;font-weight:800;letter-spacing:.5px;text-decoration:none;
+}
+</style>
+
+<style>
+/* ===== ABOUT ME — AJOUT UNIQUEMENT ===== */
+.sgpr-about-me {
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+}
+
+.sgpr-about-me-card {
+    width: 100%;
+    min-height: 430px;
+    display: grid;
+    grid-template-columns: 42% 58%;
+    background: #fff;
+}
+
+.sgpr-about-me-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 430px;
+    background: #fff;
+}
+
+.sgpr-about-me-photo img {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 18%;
+    border: 6px solid #fff;
+    box-shadow: 0 12px 35px rgba(7, 7, 79, .16);
+    display: block;
+}
+
+.sgpr-about-me-content {
+    display: flex;
+    align-items: center;
+    padding: 55px clamp(35px, 7vw, 110px);
+}
+
+.sgpr-about-me-text {
+    width: min(650px, 100%);
+}
+
+.sgpr-about-me-text h2 {
+    font-size: clamp(30px, 3vw, 46px);
+    line-height: 1.05;
+    color: #07074f;
+    margin: 0 0 24px;
+}
+
+.sgpr-about-me-text p {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(14px, 1.1vw, 17px);
+    line-height: 1.75;
+    color: #70727a;
+    margin: 0 0 12px;
+}
+
+.sgpr-about-me-text button {
+    margin-top: 18px;
+    min-width: 125px;
+    height: 40px;
+    padding: 0 18px;
+    background: #07074f;
+    color: #fff;
+    border: 1px solid #07074f;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.sgpr-about-me-text button:hover {
+    background: #d81917;
+    border-color: #d81917;
+}
+
+@media (max-width: 800px) {
+    .sgpr-about-me-card {
+        grid-template-columns: 1fr;
+    }
+
+    .sgpr-about-me-photo {
+        min-height: 280px;
+    }
+
+    .sgpr-about-me-photo img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .sgpr-about-me-content {
+        padding: 45px 25px 55px;
+    }
+}
+/* ===== LOGOS CLIENTS — UNE SEULE LIGNE ANIMÉE ===== */
+
+.sgprp-partners{
+    padding:92px 0 105px;
+    background:#fff;
+    overflow:hidden;
+}
+
+.sgprp-logo-marquee{
+    width:100%;
+    overflow:hidden;
+    position:relative;
+    margin-top:45px;
+
+    mask-image:linear-gradient(
+        to right,
+        transparent 0%,
+        #000 6%,
+        #000 94%,
+        transparent 100%
+    );
+
+    -webkit-mask-image:linear-gradient(
+        to right,
+        transparent 0%,
+        #000 6%,
+        #000 94%,
+        transparent 100%
+    );
+}
+
+.sgprp-logo-track{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    width:max-content;
+
+    animation:sgprp-logo-scroll 35s linear infinite;
+
+    will-change:transform;
+}
+
+.sgprp-logo-item{
+    width:230px;
+    min-width:230px;
+    height:110px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:15px 25px;
+
+    background:#fff;
+    border:1px solid #e7e9ee;
+    border-radius:16px;
+
+    box-shadow:0 8px 25px rgba(7,7,79,.04);
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+.sgprp-logo-item img{
+    width:170px;
+    height:75px;
+
+    object-fit:contain;
+    display:block;
+
+    filter:grayscale(100%);
+    opacity:.78;
+
+    transition:
+        transform .3s ease,
+        filter .3s ease,
+        opacity .3s ease;
+}
+
+.sgprp-logo-item:hover{
+    transform:translateY(-5px);
+    border-color:#d81917;
+    box-shadow:0 15px 35px rgba(7,7,79,.10);
+}
+
+.sgprp-logo-item:hover img{
+    transform:scale(1.08);
+    filter:grayscale(0%);
+    opacity:1;
+}
+
+
+/* ANIMATION CONTINUE */
+
+@keyframes sgprp-logo-scroll{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(calc(-50% - 9px));
+    }
+
+}
+
+
+.sgprp-logo-item img{
+    width:170px;
+    height:75px;
+
+    object-fit:contain;
+    display:block;
+
+    /* COULEURS NORMALES */
+    filter:none;
+    opacity:1;
+
+    transition:
+        transform .3s ease,
+        opacity .3s ease;
+}
+
+.sgprp-logo-item:hover img{
+    transform:scale(1.08);
+    filter:none;
+    opacity:1;
+}
+</style>
+
+<style id="sgpr-unified-chrome">
+/* SGPR — en-tête et pied de page communs à toutes les pages */
+html{scroll-behavior:smooth}
+body{min-height:100vh;display:flex;flex-direction:column}
+body .sgpr-shared-topbar{background:#787269!important;color:#fff!important;width:100%!important;min-height:40px!important;height:40px!important;box-sizing:border-box!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:12px!important;padding:0 7.4% 0 18%!important;font-family:"Ubuntu","Segoe UI",Arial,sans-serif!important;font-size:14px!important;line-height:1.3!important;position:relative!important;z-index:20!important}
+body .sgpr-shared-topbar .infos{display:flex!important;align-items:center!important;gap:30px!important;flex-wrap:wrap!important;font-size:14px!important;line-height:1.3!important;color:#fff!important}
+body .sgpr-shared-topbar .infos span{display:inline-block!important;white-space:nowrap!important}
+body .sgpr-shared-topbar .devis{background:#0a0a5a!important;color:#fff!important;height:40px!important;min-height:40px!important;padding:0 22px!important;margin:0!important;border:0!important;border-radius:0!important;display:flex!important;align-items:center!important;justify-content:center!important;font-weight:700!important;font-size:14px!important;line-height:1!important;white-space:nowrap!important;box-shadow:none!important;transform:none!important;transition:background .2s ease!important}
+body .sgpr-shared-topbar .devis:hover{background:#17177c!important;color:#fff!important}
+body header.sgpr-shared-nav{width:100%!important;height:76px!important;min-height:76px!important;max-height:76px!important;background:#fff!important;display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:0!important;padding:0 0 0 30%!important;position:relative!important;top:auto!important;left:auto!important;right:auto!important;border:0!important;border-bottom:1px solid #eee!important;box-sizing:border-box!important;overflow:visible!important;z-index:15!important;flex:0 0 76px!important}
+body header.sgpr-shared-nav .logo{position:absolute!important;left:0!important;top:0!important;bottom:auto!important;width:28%!important;min-width:0!important;max-width:none!important;height:118px!important;min-height:118px!important;max-height:118px!important;background:#fff!important;display:flex!important;align-items:center!important;justify-content:center!important;z-index:3!important;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;clip-path:polygon(0 0,100% 0,100% 45%,88% 100%,0 100%)!important;flex:none!important}
+body header.sgpr-shared-nav .logo img{display:block!important;width:min(92%,360px)!important;max-width:none!important;min-width:0!important;height:auto!important;max-height:none!important;object-fit:contain!important;margin:0!important;padding:0!important;animation:fadeIn .7s ease both}
+body header.sgpr-shared-nav>a:not(.logo){height:76px!important;min-height:76px!important;max-height:76px!important;padding:0 25px!important;margin:0!important;display:flex!important;align-items:center!important;justify-content:center!important;flex:0 0 auto!important;box-sizing:border-box!important;border:0!important;border-radius:0!important;background:transparent!important;color:#0a0a5a!important;font-family:"Ubuntu","Segoe UI",Arial,sans-serif!important;font-size:14px!important;font-weight:700!important;line-height:1!important;letter-spacing:0!important;text-decoration:none!important;text-transform:uppercase!important;white-space:nowrap!important;transition:background .2s ease,color .2s ease!important}
+body header.sgpr-shared-nav>a:not(.logo):hover,body header.sgpr-shared-nav>a:not(.logo):focus-visible{background:#f1f2f6!important;color:#d0110f!important;outline-offset:-3px}
+body header.sgpr-shared-nav>a:not(.logo).active,body header.sgpr-shared-nav>a:not(.logo)[aria-current="page"]{background:#0a0a5a!important;color:#fff!important}
+body header.sgpr-shared-nav>a:not(.logo).active:hover,body header.sgpr-shared-nav>a:not(.logo)[aria-current="page"]:hover{background:#0a0a5a!important;color:#fff!important}
+body footer.sgpr-shared-footer{position:relative!important;isolation:isolate!important;flex:0 0 auto!important;width:100%!important;min-height:110px!important;height:auto!important;margin-top:auto!important;padding:22px!important;box-sizing:border-box!important;display:flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;overflow:hidden!important;background:#030329!important;color:#fff!important;border:0!important;font-family:"Ubuntu","Segoe UI",Arial,sans-serif!important}
+body footer.sgpr-shared-footer:before{content:""!important;position:absolute!important;left:0!important;top:0!important;width:38%!important;height:70px!important;background:#f5f5f7!important;clip-path:polygon(0 0,100% 0,84% 100%,0 100%)!important;pointer-events:none!important;z-index:-1!important}
+body footer.sgpr-shared-footer div{position:relative!important;z-index:1!important;color:#fff!important;font-size:20px!important;line-height:1.5!important;font-weight:400!important}
+@media(max-width:1000px){
+ body .sgpr-shared-topbar{height:auto!important;min-height:40px!important;padding:8px 16px!important;gap:10px!important;align-items:flex-start!important;font-size:11px!important;flex-wrap:wrap!important}
+ body .sgpr-shared-topbar .infos{gap:8px 16px!important;font-size:11px!important}
+ body .sgpr-shared-topbar .infos span{white-space:normal!important}
+ body .sgpr-shared-topbar .devis{margin-left:auto!important;height:40px!important;min-height:40px!important;font-size:11px!important}
+ body header.sgpr-shared-nav{padding:0!important;height:auto!important;min-height:64px!important;max-height:none!important;flex:0 0 auto!important;overflow-x:auto!important;overflow-y:hidden!important;justify-content:flex-start!important}
+ body header.sgpr-shared-nav .logo{position:relative!important;left:auto!important;top:auto!important;bottom:auto!important;width:280px!important;min-width:280px!important;height:80px!important;min-height:80px!important;max-height:80px!important;clip-path:none!important;flex:0 0 280px!important}
+ body header.sgpr-shared-nav .logo img{width:250px!important;max-width:250px!important}
+ body header.sgpr-shared-nav>a:not(.logo){height:64px!important;min-height:64px!important;max-height:64px!important;padding:0 18px!important;font-size:13px!important}
+}
+@media(max-width:600px){
+ body .sgpr-shared-topbar{flex-direction:column!important;align-items:flex-start!important;gap:7px!important;padding:9px 16px!important}
+ body .sgpr-shared-topbar .infos{gap:7px 12px!important}
+ body .sgpr-shared-topbar .devis{align-self:flex-end!important;margin-left:0!important}
+ body header.sgpr-shared-nav .logo{width:150px!important;min-width:150px!important;height:64px!important;min-height:64px!important;max-height:64px!important;flex:0 0 150px!important}
+ body header.sgpr-shared-nav .logo img{width:140px!important;max-width:140px!important}
+ body header.sgpr-shared-nav>a:not(.logo){padding:0 10px!important;font-size:10px!important}
+ body footer.sgpr-shared-footer{min-height:85px!important;padding:20px 15px!important}
+ body footer.sgpr-shared-footer:before{width:28%!important;height:35px!important}
+ body footer.sgpr-shared-footer div{font-size:15px!important}
+}
+</style>
+</head><body>
+<div class="topbar sgpr-shared-topbar">
+  <div class="infos">
+    <span>✉ sahbigharbi.gpr@gmail.com</span>
+    <span>✆ 55 000 748</span>
+    <span>⚲ 104 Av. de la République – Soliman</span>
+  </div>
+  <a href="devis.html" class="devis">DEMANDER UN DEVIS</a>
+</div>
+<header class="nav sgpr-shared-nav" aria-label="Navigation principale">
+  <a href="index.html" class="logo"><img src="https://raw.githubusercontent.com/subscribpro-dev/AAAA/refs/heads/main/sgpr-logo.png" alt="SGPR"></a>
+  <a href="index.html" class="active" aria-current="page">Accueil</a>
+  <a href="marques.html">Marques</a>
+  <a href="produits.html">Produits</a>
+  <a href="contact.html">Contact</a>
+</header>
+<section class="home-carousel" aria-label="Présentation SGPR">
+<div class="carousel-track" id="homeCarouselTrack">
+<div class="slide"><img src="https://raw.githubusercontent.com/subscribpro-dev/AAAA/refs/heads/main/Camion Scania devant un magasin illuminé.png" alt="Pièces de rechange pour camions et poids lourds"></div>
+<div class="slide"><img src="https://raw.githubusercontent.com/subscribpro-dev/AAAA/refs/heads/main/Chargement nocturne de pneus industriels.png" alt="Pièces détachées pour camions et véhicules industriels"></div>
+<div class="slide"><img src="https://raw.githubusercontent.com/subscribpro-dev/AAAA/refs/heads/main/Semi-remorque MSC sous les lumières nocturnes.png" alt="Pièces et composants pour véhicules industriels"></div>
+</div>
+<button class="carousel-btn prev" type="button" aria-label="Image précédente" onclick="moveHomeCarousel(-1)">‹</button>
+<button class="carousel-btn next" type="button" aria-label="Image suivante" onclick="moveHomeCarousel(1)">›</button>
+<div class="carousel-dots"><button class="dot active" onclick="goHomeCarousel(0)" aria-label="Image 1"></button><button class="dot" onclick="goHomeCarousel(1)" aria-label="Image 2"></button><button class="dot" onclick="goHomeCarousel(2)" aria-label="Image 3"></button></div>
+</section>
+
+
+<!-- ===== ABOUT ME — AJOUT UNIQUEMENT ===== -->
+<section class="sgpr-about-me" aria-label="About Me">
+    <div class="sgpr-about-me-card">
+
+        <div class="sgpr-about-me-photo">
+            <img src="https://raw.githubusercontent.com/subscribpro-dev/AAAA/refs/heads/main/50e61458-dd55-48e7-b371-05db3678bf23.png" alt="Photo de profil">
+        </div>
+
+        <div class="sgpr-about-me-content">
+            <div class="sgpr-about-me-text">
+
+                <h2>About Me</h2>
+
+               <p>
+    Fondée en 2012 par <strong>Sahbi Gharbi</strong>, SGPR est spécialisée
+    dans le commerce de gros de pièces de rechange pour camions.
+    En tant que gérant, Sahbi Gharbi dirige l’entreprise et veille à son
+    développement et à la satisfaction de ses clients.
+</p>
+
+<p>
+    SGPR propose des pièces de rechange destinées aux professionnels,
+    avec un engagement basé sur la qualité, la disponibilité et le sérieux.
+</p>
+
+<p>
+    Sous la direction de <strong>Sahbi Gharbi</strong>, SGPR poursuit son
+    développement dans le secteur des véhicules industriels.
+</p>
+
+                <button type="button" onclick="window.open('https://wa.me/21655000748?text=Bonjour%20Sahbi%20Gharbi%2C%20je%20vous%20contacte%20depuis%20le%20site%20SGPR.', '_blank')">
+    CONTACT ME
+</button>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- BEGIN ADDED PREMIUM COMPANY PRESENTATION -->
+<!-- Vidéo YouTube SGPR : BRD2LPYOEdk -->
+<!-- Important : YouTube Error 153 apparaît si ce fichier est ouvert directement en file://.
+     Le site doit être lancé via http:// ou https:// (hébergement ou serveur local). -->
+<section class="sgpr-premium" aria-label="Présentation premium de SGPR">
+
+
+
+<!-- SECTION 2 — À PROPOS DE L’ENTREPRISE -->
+<section class="sgprp-section sgprp-white sgprp-reveal" id="sgprp-history">
+  <div class="sgprp-container sgprp-two-col">
+
+    <div class="sgprp-media-card">
+      <img src="https://raw.githubusercontent.com/subscribpro-dev/AAAA/refs/heads/main/aaad.png" alt="Pièces de rechange poids lourds">
+      <div class="sgprp-badge">Depuis 2012 aux côtés des professionnels</div>
+    </div>
+
+    <div class="sgprp-copy">
+      <span class="sgprp-label">À propos de nous</span>
+
+      <h2>Votre spécialiste des pièces de rechange</h2>
+
+      <p>
+        Spécialisés dans les <strong>pièces pour poids lourds, pièces Engine
+        et pièces pour chariots élévateurs</strong>, nous accompagnons les
+        professionnels avec des références adaptées à leurs besoins et un
+        service de proximité.
+      </p>
+
+      <a class="sgprp-btn" href="#sgprp-services">
+        Découvrir notre expertise <span>→</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION 1 — HERO / VIDEO -->
+<section class="sgprp-hero sgprp-reveal" id="sgprp-about">
+
+  <div class="sgprp-hero-video">
+    <iframe
+      id="sgprYoutubeFrame"
+      src="https://www.youtube.com/embed/ZzdL_Sx1EeY?autoplay=1&mute=1&controls=0&loop=1&playlist=ZzdL_Sx1EeY&playsinline=1&enablejsapi=1&rel=0"
+      title="Vidéo de présentation de l’activité SGPR"
+      frameborder="0"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allow="autoplay; encrypted-media; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <div class="sgprp-hero-overlay"></div>
+
+  <div class="sgprp-hero-content">
+
+    <div class="sgprp-hero-copy">
+      <div class="sgprp-kicker">QUI SOMMES-NOUS ?</div>
+
+      <h1>
+        <span>Qui</span> <strong>sommes-nous ?</strong>
+      </h1>
+
+      <p>
+        Créée en 2012, SGPR est spécialisée dans la fourniture de pièces
+        de rechange pour camions et poids lourds, avec une priorité donnée
+        à la disponibilité, à la qualité des pièces et aux besoins des
+        professionnels.
+      </p>
+    </div>
+
+    <div class="sgprp-hero-action">
+      <button
+        class="sgprp-play"
+        type="button"
+        aria-label="Lire ou mettre en pause la vidéo">
+        <span class="sgprp-play-icon">▶</span>
+      </button>
+
+      <div class="sgprp-play-label">
+        DÉCOUVRIR NOTRE ACTIVITÉ
+      </div>
+    </div>
+
+  </div>
+
+  <a
+    class="sgprp-scroll"
+    href="#sgprp-history"
+    aria-label="Faire défiler vers la suite">
+    <span></span>
+  </a>
+
+</section>
+<!-- SECTION 3 — NOS VALEURS -->
+<section class="sgprp-section sgprp-soft sgprp-reveal" id="sgprp-values">
+  <div class="sgprp-container">
+
+    <div class="sgprp-heading-center">
+      <span class="sgprp-label">Nos valeurs</span>
+      <h2>Nos valeurs</h2>
+      <p>
+        Des engagements qui nous permettent de répondre efficacement
+        aux besoins des professionnels.
+      </p>
+    </div>
+
+    <div class="sgprp-value-grid">
+
+      <article class="sgprp-value-card">
+        <div class="sgprp-icon">✦</div>
+        <h3>Expertise</h3>
+        <p>
+          Une connaissance du secteur des poids lourds, des pièces Engine
+          et des chariots élévateurs pour répondre aux besoins techniques
+          de nos clients.
+        </p>
+      </article>
+
+      <article class="sgprp-value-card">
+        <div class="sgprp-icon">◆</div>
+        <h3>Disponibilité</h3>
+        <p>
+          Nous accordons une priorité à la disponibilité des pièces et
+          à la réactivité afin de limiter l’immobilisation des véhicules
+          et des équipements.
+        </p>
+      </article>
+
+      <article class="sgprp-value-card">
+        <div class="sgprp-icon">◈</div>
+        <h3>Qualité</h3>
+        <p>
+          Nous sélectionnons des pièces adaptées aux exigences des
+          véhicules industriels et des équipements professionnels.
+        </p>
+      </article>
+
+      <article class="sgprp-value-card">
+        <div class="sgprp-icon">✓</div>
+        <h3>Service</h3>
+        <p>
+          Un accompagnement direct et professionnel pour aider nos clients
+          à trouver les pièces adaptées à leurs besoins.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+  <!-- SECTION 4 — CHIFFRES CLÉS -->
+  <section class="sgprp-stats sgprp-reveal">
+    <div class="sgprp-stats-bg"></div>
+    <div class="sgprp-container sgprp-stat-grid">
+      <div><strong data-count="250" data-suffix="+">15000+</strong><span>Références pour véhicules industriels</span></div>
+      <div><strong data-count="500" data-suffix="+">500+</strong><span>Demandes traitées pour professionnels</span></div>
+      <div><strong data-count="500" data-suffix="+">500+</strong><span>Clients professionnels accompagnés</span></div>
+      <div><strong data-count="25">25</strong><span>Années d’expérience</span></div>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — NOS SERVICES -->
+  <section class="sgprp-section sgprp-soft sgprp-reveal" id="sgprp-services">
+    <div class="sgprp-container">
+      <div class="sgprp-heading-center sgprp-heading-wide">
+        <span class="sgprp-label">Nos services</span>
+        <h2>Des pièces adaptées à vos besoins</h2>
+        <p>Nous aidons les professionnels à identifier les bonnes pièces de rechange pour leurs camions, avec un service adapté aux contraintes du transport routier.</p>
+      </div>
+      <div class="sgprp-service-grid">
+        <article class="sgprp-service-card">
+          <div class="sgprp-service-image"><img src="https://raw.githubusercontent.com/subscribpro-dev/AAAA/refs/heads/main/3ajla.png" alt="Réunion de conseil et stratégie"></div>
+          <div class="sgprp-service-body"><div class="sgprp-service-icon">↗</div><h3>Identification des pièces</h3><p>Nous vous aidons à identifier la pièce recherchée à partir de sa référence, du véhicule ou de ses caractéristiques techniques.</p></div>
+        </article>
+        <article class="sgprp-service-card">
+          <div class="sgprp-service-image"><img src="https://raw.githubusercontent.com/subscribpro-dev/AAAA/refs/heads/main/adzzad.png" alt="Pièces pour poids lourds"></div>
+          <div class="sgprp-service-body"><div class="sgprp-service-icon">⌘</div><h3>Pièces pour poids lourds</h3><p>Nous proposons des pièces et composants destinés aux camions et véhicules industriels, selon les besoins et références disponibles.</p></div>
+        </article>
+        <article class="sgprp-service-card">
+          <div class="sgprp-service-image"><img src="https://raw.githubusercontent.com/subscribpro-dev/AAAA/refs/heads/main/gytfu.png" alt="Service professionnel des équipes"></div>
+          <div class="sgprp-service-body"><div class="sgprp-service-icon">◎</div><h3>Service professionnel</h3><p>Nous restons disponibles pour vos demandes de pièces, vos recherches de références et le suivi de vos besoins professionnels.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6 — NOTRE IMPACT -->
+  <section class="sgprp-section sgprp-white sgprp-reveal" id="sgprp-impact">
+    <div class="sgprp-container sgprp-two-col sgprp-impact">
+      <div class="sgprp-copy">
+        <span class="sgprp-label">Notre engagement</span>
+        <h2>Réduire le temps d’immobilisation des camions</h2>
+        <p>Notre objectif est simple : aider les professionnels du transport à maintenir leurs camions en service grâce à des pièces de rechange adaptées, disponibles et sélectionnées selon leurs besoins.</p>
+        <a class="sgprp-btn" href="#sgprp-team">Découvrir notre activité <span>→</span></a>
+      </div>
+      <div class="sgprp-impact-image">
+        <img src="https://raw.githubusercontent.com/subscribpro-dev/AAAA/refs/heads/main/111.png" alt="Paysage naturel durable avec rivière">
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- SECTION 8 — TÉMOIGNAGES -->
+<section class="sgprp-testimonials sgprp-reveal" id="sgprp-testimonials">
+  <div class="sgprp-container">
+    <div class="sgprp-heading-center sgprp-heading-light">
+      <span class="sgprp-label">Avis de nos clients</span>
+      <h2>Les professionnels parlent de leur expérience</h2>
+    </div>
+
+    <div class="sgprp-testimonial-grid">
+
+      <article class="sgprp-testimonial">
+        <div class="sgprp-quote">“</div>
+        <p>
+          Une équipe réactive pour rechercher les bonnes références et répondre
+          rapidement aux besoins de notre flotte.
+        </p>
+        <div class="sgprp-client">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=180&q=80" alt="Portrait de Mohamed Ben Salah">
+          <div>
+            <strong>Mohamed Ben Salah</strong>
+            <span>Responsable flotte — Société de transport</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="sgprp-testimonial">
+        <div class="sgprp-quote">“</div>
+        <p>
+          Nous apprécions la disponibilité des pièces et la connaissance des
+          besoins spécifiques aux véhicules poids lourds.
+        </p>
+        <div class="sgprp-client">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=180&q=80" alt="Portrait de Amel Trabelsi">
+          <div>
+            <strong>Amel Trabelsi</strong>
+            <span>Responsable achats — Entreprise de transport</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="sgprp-testimonial">
+        <div class="sgprp-quote">“</div>
+        <p>
+          Une relation professionnelle basée sur la réactivité, la qualité des
+          pièces et le respect des besoins de notre activité.
+        </p>
+        <div class="sgprp-client">
+          <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=180&q=80" alt="Portrait de Hatem Gharbi">
+          <div>
+            <strong>Hatem Gharbi</strong>
+            <span>Chef d’atelier — Atelier poids lourds</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 9 — PARTENAIRES / CLIENTS -->
+<section class="sgprp-partners sgpr-reveal">
+  <div class="sgprp-container">
+
+<div class="sgprp-heading-center">
+  <span class="sgprp-label">Partenaires</span>
+  <h2>Nos partenaires</h2>
+</div>
+
+    <div class="sgprp-logo-marquee">
+
+      <div class="sgprp-logo-track">
+
+        <!-- SOCOGES -->
+        <div class="sgprp-logo-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIegcFfAx9IrpNqJ-Lpz7pA62lAj-6uCxQlmVTd6t3rA&s=10" alt="SOCOGES">
+        </div>
+
+        <!-- GROUPE DÉLICE -->
+        <div class="sgprp-logo-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWWn5WdZJhek3sxnPntfI0xkzN-Em5V-nQFAa1LDB6&s=10" alt="Groupe Délice">
+        </div>
+
+        <!-- SNBG -->
+        <div class="sgprp-logo-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMiQdVUPJDPsEj_iNkufdvMed5HQzsxxtfnjpnPGYX6zcMo6VENK3CQgw&s=10" alt="SNBG">
+        </div>
+
+        <!-- SONOBRA -->
+        <div class="sgprp-logo-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgjs18zpvLJGeingimFwOr_G9O8abU_c2d-epFQtfWxtt4U_j8TutLUrds&s=10" alt="SONOBRA">
+        </div>
+
+        <!-- LUMIÈRE LOGISTIQUE -->
+        <div class="sgprp-logo-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLT5Rn8IilrB2-JsavZ7R8pNcaoWm1WeqQjNK-OhTYJQ&s=10" alt="Lumière Logistique">
+        </div>
+
+        <!-- SOUVENIR VOYAGE -->
+        <div class="sgprp-logo-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3z-q9-ElgfnndHoQ3jMro2mSFEXH9tOG_n0adbhkUvw&s=10" alt="Souvenir Voyage">
+        </div>
+
+        <!-- SDPL -->
+        <div class="sgprp-logo-item">
+          <img src="https://sdpltd.co.in/assets/images/sdpl.png" alt="SDPL">
+        </div>
+
+        <!-- STE PAM -->
+        <div class="sgprp-logo-item">
+          <img src="https://media.licdn.com/dms/image/v2/D4E0BAQEI6GbrEpEBug/company-logo_200_200/B4EZudAfN5LYAI-/0/1767865709821/saint_gobain_pam_canalisation_logo?e=2147483647&v=beta&t=EiBMCoVBMwB2YAHeNMD96ZsFw7-DGjlZndGpnT363Dk" alt="STE PAM">
+        </div>
+
+        <!-- STE PROVITALE -->
+        <div class="sgprp-logo-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw-xwsIoBKobMJdYMBy5V0_LwBGzOBtNS2KOph34xN91WoKEt6XSQsUHw&s=10" alt="STE Provitale">
+        </div>
+
+        <!-- GROUPEMENT DES MANUTENTIONNAIRES -->
+        <div class="sgprp-logo-item">
+          <img src="https://www.sttat.tn/wp-content/uploads/2026/02/GMS-e1786524072469.png" alt="Groupement des manutentionnaires">
+        </div>
+
+
+        <!-- ===== DUPLICATION POUR ANIMATION INFINIE ===== -->
+
+        <!-- SOCOGES -->
+        <div class="sgprp-logo-item" aria-hidden="true">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIegcFfAx9IrpNqJ-Lpz7pA62lAj-6uCxQlmVTd6t3rA&s=10" alt="">
+        </div>
+
+        <!-- GROUPE DÉLICE -->
+        <div class="sgprp-logo-item" aria-hidden="true">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWWn5WdZJhek3sxnPntfI0xkzN-Em5V-nQFAa1LDB6&s=10" alt="">
+        </div>
+
+        <!-- SNBG -->
+        <div class="sgprp-logo-item" aria-hidden="true">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMiQdVUPJDPsEj_iNkufdvMed5HQzsxxtfnjpnPGYX6zcMo6VENK3CQgw&s=10" alt="">
+        </div>
+
+        <!-- SONOBRA -->
+        <div class="sgprp-logo-item" aria-hidden="true">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgjs18zpvLJGeingimFwOr_G9O8abU_c2d-epFQtfWxtt4U_j8TutLUrds&s=10" alt="">
+        </div>
+
+        <!-- LUMIÈRE LOGISTIQUE -->
+        <div class="sgprp-logo-item" aria-hidden="true">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLT5Rn8IilrB2-JsavZ7R8pNcaoWm1WeqQjNK-OhTYJQ&s=10" alt="">
+        </div>
+
+        <!-- SOUVENIR VOYAGE -->
+        <div class="sgprp-logo-item" aria-hidden="true">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3z-q9-ElgfnndHoQ3jMro2mSFEXH9tOG_n0adbhkUvw&s=10" alt="">
+        </div>
+
+        <!-- SDPL -->
+        <div class="sgprp-logo-item" aria-hidden="true">
+          <img src="assets/logos/sdpl.png" alt="">
+        </div>
+
+        <!-- STE PAM -->
+        <div class="sgprp-logo-item" aria-hidden="true">
+          <img src="https://media.licdn.com/dms/image/v2/D4E0BAQEI6GbrEpEBug/company-logo_200_200/B4EZudAfN5LYAI-/0/1767865709821/saint_gobain_pam_canalisation_logo?e=2147483647&v=beta&t=EiBMCoVBMwB2YAHeNMD96ZsFw7-DGjlZndGpnT363Dk" alt="">
+        </div>
+
+        <!-- STE PROVITALE -->
+        <div class="sgprp-logo-item" aria-hidden="true">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw-xwsIoBKobMJdYMBy5V0_LwBGzOBtNS2KOph34xN91WoKEt6XSQsUHw&s=10" alt="">
+        </div>
+
+        <!-- GROUPEMENT DES MANUTENTIONNAIRES -->
+        <div class="sgprp-logo-item" aria-hidden="true">
+          <img src="https://www.sttat.tn/wp-content/uploads/2026/02/GMS-e1786524072469.png" alt="">
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  
+
+<style>
+.sgpr-premium{--p-blue:#1597ff;--p-blue2:#0d7fe0;--p-navy:#061329;--p-ink:#0c1730;--p-soft:#f5f7fa;--p-muted:#697386;--p-white:#fff;font-family:"Inter","Manrope","Segoe UI",Arial,sans-serif;color:var(--p-ink);overflow:hidden;background:#fff}
+.sgpr-premium *{box-sizing:border-box}.sgprp-container{width:min(1180px,calc(100% - 48px));margin:0 auto}.sgprp-section{padding:110px 0}.sgprp-white{background:#fff}.sgprp-soft{background:#f5f7fa}
+.sgprp-hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:#07111f;color:#fff}
+.sgprp-hero-video{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;background:#07111f}
+.sgprp-hero-video iframe{position:absolute;top:50%;left:50%;width:100vw;height:56.25vw;min-width:177.78vh;min-height:100%;transform:translate(-50%,-50%);border:0;pointer-events:none}
+.sgprp-hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,8,18,.86) 0%,rgba(2,8,18,.58) 46%,rgba(2,8,18,.28) 100%),linear-gradient(0deg,rgba(2,8,18,.55),transparent 40%,rgba(2,8,18,.22))}
+.sgprp-hero-content{position:relative;z-index:2;width:min(1180px,calc(100% - 48px));margin:0 auto;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}.sgprp-hero-copy{max-width:720px}.sgprp-kicker{font-size:12px;letter-spacing:3px;font-weight:800;color:#ff6b68;margin-bottom:20px}.sgprp-hero h1{font-size:clamp(52px,7vw,96px);line-height:.98;letter-spacing:-3px;margin:0 0 28px;font-weight:800}.sgprp-hero h1 span{color:#fff}.sgprp-hero h1 strong{color:#d81917;font-weight:800}.sgprp-hero p{font-size:clamp(17px,1.6vw,21px);line-height:1.75;color:rgba(255,255,255,.88);max-width:690px}.sgprp-hero-action{display:none;flex-direction:column;align-items:center;justify-content:center;min-height:320px}.sgprp-play{width:128px;height:128px;border-radius:50%;border:1px solid rgba(255,255,255,.5);background:rgba(10,27,49,.32);backdrop-filter:blur(12px);color:#fff;display:grid;place-items:center;cursor:pointer;box-shadow:0 20px 60px rgba(0,0,0,.28);transition:transform .25s ease,background .25s ease,border-color .25s ease}.sgprp-play:hover{transform:scale(1.06);background:rgba(216,25,23,.38);border-color:#fff}.sgprp-play-icon{font-size:30px;margin-left:6px}.sgprp-play-label{margin-top:20px;font-size:12px;letter-spacing:2.5px;font-weight:800}.sgprp-scroll{position:absolute;z-index:3;bottom:26px;left:50%;width:24px;height:42px;transform:translateX(-50%);border:1px solid rgba(255,255,255,.55);border-radius:20px}.sgprp-scroll span{position:absolute;left:50%;top:8px;width:5px;height:8px;border-radius:4px;background:#fff;transform:translateX(-50%);animation:sgprp-scroll 1.8s infinite}
+@keyframes sgprp-scroll{0%,100%{opacity:.25;transform:translate(-50%,0)}45%{opacity:1;transform:translate(-50%,13px)}}
+.sgprp-two-col{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}.sgprp-media-card{position:relative}.sgprp-media-card img,.sgprp-impact-image img{display:block;width:100%;height:560px;object-fit:cover;border-radius:24px;box-shadow:0 25px 70px rgba(5,18,42,.13)}.sgprp-badge{position:absolute;left:24px;bottom:24px;background:#fff;border-radius:14px;padding:13px 18px;font-size:13px;font-weight:800;color:#07074f;border-left:4px solid #d81917;box-shadow:0 12px 30px rgba(0,0,0,.14)}.sgprp-copy{max-width:600px}.sgprp-label{display:inline-block;color:#b51216;font-size:12px;letter-spacing:2.3px;text-transform:uppercase;font-weight:800;margin-bottom:14px}.sgprp-copy h2,.sgprp-heading-center h2{font-size:clamp(36px,4vw,58px);line-height:1.04;letter-spacing:-2px;margin-bottom:22px;color:var(--p-ink)}.sgprp-copy p,.sgprp-heading-center p{font-size:17px;line-height:1.8;color:var(--p-muted)}.sgprp-btn{display:inline-flex;align-items:center;gap:12px;margin-top:28px;padding:15px 22px;border-radius:14px;background:#d81917;color:#fff;font-size:14px;font-weight:800;transition:transform .22s ease,background .22s ease,box-shadow .22s ease}.sgprp-btn:hover{transform:translateY(-2px);background:#b51216;box-shadow:0 12px 25px rgba(216,25,23,.2)}.sgprp-btn-blue{background:var(--p-blue)}.sgprp-btn-blue:hover{background:#0d83df}
+.sgprp-heading-center{text-align:center;max-width:780px;margin:0 auto 50px}.sgprp-heading-center .sgprp-label{margin-bottom:8px}.sgprp-heading-center h2{margin-bottom:12px}.sgprp-heading-wide{max-width:850px}.sgprp-value-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.sgprp-value-card{background:#fff;border:1px solid #e7ebf1;border-radius:20px;padding:32px 28px;min-height:270px;transition:transform .25s ease,box-shadow .25s ease}.sgprp-value-card:hover{transform:translateY(-6px);box-shadow:0 18px 45px rgba(6,19,41,.08)}.sgprp-icon,.sgprp-service-icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:rgba(21,151,255,.1);color:var(--p-blue);font-size:22px;font-weight:900;margin-bottom:25px}.sgprp-value-card h3{font-size:22px;margin-bottom:12px}.sgprp-value-card p{color:var(--p-muted);line-height:1.75;font-size:15px}
+.sgprp-stats{position:relative;background:var(--p-navy);color:#fff;padding:92px 0;overflow:hidden}.sgprp-stats-bg{position:absolute;inset:0;background:linear-gradient(rgba(6,19,41,.82),rgba(6,19,41,.9)),url("https://raw.githubusercontent.com/subscribpro-dev/AAAA/refs/heads/main/Camion Scania devant un magasin illuminé.png") center/cover no-repeat}.sgprp-stat-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr)}.sgprp-stat-grid>div{text-align:center;padding:15px 25px;border-right:1px solid rgba(255,255,255,.15)}.sgprp-stat-grid>div:last-child{border-right:0}.sgprp-stat-grid strong{display:block;font-size:clamp(48px,5vw,76px);letter-spacing:-3px;line-height:1;margin-bottom:12px}.sgprp-stat-grid span{display:block;color:rgba(255,255,255,.76);font-size:13px;letter-spacing:.3px}
+.sgprp-service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.sgprp-service-card{background:#fff;border:1px solid #e8ecf2;border-radius:22px;overflow:hidden;box-shadow:0 14px 40px rgba(6,19,41,.06);transition:transform .25s ease,box-shadow .25s ease}.sgprp-service-card:hover{transform:translateY(-7px);box-shadow:0 25px 60px rgba(6,19,41,.12)}.sgprp-service-image{height:260px;overflow:hidden}.sgprp-service-image img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}.sgprp-service-card:hover .sgprp-service-image img{transform:scale(1.045)}.sgprp-service-body{padding:28px}.sgprp-service-icon{margin-bottom:17px}.sgprp-service-body h3{font-size:25px;margin-bottom:12px}.sgprp-service-body p{color:var(--p-muted);line-height:1.75}
+.sgprp-impact{gap:80px}.sgprp-impact-image img{height:520px}.sgprp-team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.sgprp-team-card{background:#fff;border-radius:20px;overflow:hidden;border:1px solid #e6eaf0;box-shadow:0 12px 34px rgba(6,19,41,.06)}.sgprp-team-card>img{width:100%;height:330px;object-fit:cover;display:block;filter:saturate(.92)}.sgprp-team-card>div{padding:20px 20px 22px;position:relative}.sgprp-team-card h3{font-size:18px;margin-bottom:4px}.sgprp-team-card p{font-size:14px;color:var(--p-muted)}.sgprp-team-card span{position:absolute;right:20px;top:20px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#eef7ff;color:var(--p-blue);font-size:12px;font-weight:900}
+.sgprp-testimonials{background:#07152a;color:#fff;padding:110px 0}.sgprp-heading-light h2{color:#fff}.sgprp-heading-light p{color:rgba(255,255,255,.68)}.sgprp-testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.sgprp-testimonial{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:32px;position:relative}.sgprp-quote{font-size:70px;line-height:.7;color:var(--p-blue);font-family:Georgia,serif}.sgprp-testimonial>p{font-size:16px;line-height:1.8;color:rgba(255,255,255,.84);margin:16px 0 30px}.sgprp-client{display:flex;align-items:center;gap:13px}.sgprp-client img{width:48px;height:48px;border-radius:50%;object-fit:cover}.sgprp-client strong,.sgprp-client span{display:block}.sgprp-client strong{font-size:14px}.sgprp-client span{font-size:12px;color:rgba(255,255,255,.55);margin-top:3px}
+.sgprp-partners{padding:92px 0;background:#fff}.sgprp-logo-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;align-items:center}.sgprp-logo-grid div{min-height:92px;display:grid;place-items:center;border:1px solid #e9edf2;border-radius:16px;color:#737b88;font-weight:900;letter-spacing:1.5px;filter:grayscale(1);opacity:.75;transition:opacity .2s ease,transform .2s ease}.sgprp-logo-grid div:hover{opacity:1;transform:translateY(-2px)}
+.sgprp-cta{position:relative;min-height:560px;display:grid;place-items:center;text-align:center;color:#fff;overflow:hidden}.sgprp-cta-bg{position:absolute;inset:0;background:linear-gradient(rgba(3,10,22,.76),rgba(3,10,22,.8)),url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2200&q=85") center/cover no-repeat}.sgprp-cta-content{position:relative;z-index:1;width:min(850px,calc(100% - 48px))}.sgprp-cta-content .sgprp-label{color:#8dccff}.sgprp-cta h2{font-size:clamp(42px,5vw,72px);line-height:1.02;letter-spacing:-2.5px;margin:5px 0 20px}.sgprp-cta p{font-size:18px;line-height:1.75;color:rgba(255,255,255,.8);max-width:700px;margin:0 auto}
+.sgprp-footer{background:#040b17;color:#fff;padding:70px 0 0}.sgprp-footer-grid{display:grid;grid-template-columns:1.5fr 1fr .8fr;gap:60px;padding-bottom:55px}.sgprp-footer h3{font-size:30px;margin-bottom:12px}.sgprp-footer h4{font-size:13px;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:16px;color:#9bcfff}.sgprp-footer p{color:rgba(255,255,255,.62);line-height:1.8;font-size:14px}.sgprp-social{display:flex;gap:9px}.sgprp-social a{width:38px;height:38px;border:1px solid rgba(255,255,255,.2);border-radius:50%;display:grid;place-items:center;color:#fff;font-size:13px;transition:.2s}.sgprp-social a:hover{background:var(--p-blue);border-color:var(--p-blue)}.sgprp-footer-bottom{border-top:1px solid rgba(255,255,255,.1);text-align:center;padding:20px;color:rgba(255,255,255,.4);font-size:12px}
+.sgprp-reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.sgprp-reveal.sgprp-visible{opacity:1;transform:none}
+/* SGPR identity — hero + À propos uniquement */
+.sgprp-hero{background:#07074f}
+#sgprp-history{position:relative}
+
+#sgprp-history .sgprp-copy h2{color:#07074f}
+#sgprp-history .sgprp-copy h2:after{content:"";display:block;width:62px;height:4px;margin-top:18px;border-radius:99px;background:#d81917}
+#sgprp-history .sgprp-btn{background:#07074f}
+#sgprp-history .sgprp-btn:hover{background:#d81917}
+
+@media(max-width:1000px){.sgprp-hero-content,.sgprp-two-col{grid-template-columns:1fr;gap:45px}.sgprp-hero{min-height:850px}.sgprp-hero-action{min-height:190px;align-items:flex-start}.sgprp-value-grid{grid-template-columns:repeat(2,1fr)}.sgprp-team-grid{grid-template-columns:repeat(2,1fr)}.sgprp-logo-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.sgprp-container,.sgprp-hero-content{width:min(100% - 32px,1180px)}.sgprp-section{padding:78px 0}.sgprp-hero h1{font-size:48px;letter-spacing:-2px}.sgprp-hero p{font-size:16px}.sgprp-play{width:96px;height:96px}.sgprp-media-card img,.sgprp-impact-image img{height:420px}.sgprp-value-grid,.sgprp-service-grid,.sgprp-team-grid,.sgprp-testimonial-grid,.sgprp-stat-grid{grid-template-columns:1fr}.sgprp-stat-grid>div{border-right:0;border-bottom:1px solid rgba(255,255,255,.15);padding:26px 10px}.sgprp-stat-grid>div:last-child{border-bottom:0}.sgprp-logo-grid{grid-template-columns:repeat(2,1fr)}.sgprp-footer-grid{grid-template-columns:1fr;gap:28px}.sgprp-cta{min-height:520px}}
+@media(prefers-reduced-motion:reduce){.sgprp-reveal{opacity:1;transform:none;transition:none}.sgprp-scroll span{animation:none}.sgprp-value-card,.sgprp-service-card,.sgprp-team-card,.sgprp-logo-grid div,.sgprp-play{transition:none}}
+</style>
+
+<script>
+(function(){
+  const root=document.querySelector('.sgpr-premium');
+  if(!root) return;
+
+  const videoFrame=root.querySelector('#sgprYoutubeFrame');
+  const play=root.querySelector('.sgprp-play');
+  const icon=root.querySelector('.sgprp-play-icon');
+
+  // YouTube Error 153 = absence de HTTP Referer.
+  // Sur une vraie page HTTP/HTTPS, on transmet explicitement l'origine du site.
+  if(videoFrame && location.protocol !== 'file:'){
+    const videoUrl=new URL(videoFrame.src);
+    videoUrl.searchParams.set('origin', location.origin);
+    videoUrl.searchParams.set('widget_referrer', location.href);
+    videoFrame.src=videoUrl.toString();
+  }
+
+  // Autoplay muet : autorisé par les navigateurs modernes dans un iframe.
+  // Le bouton de lecture n'est volontairement pas affiché.
+  if(videoFrame){
+    const playWhenReady=()=>{
+      try{
+        videoFrame.contentWindow.postMessage(JSON.stringify({event:'command',func:'mute',args:[]}), '*');
+        videoFrame.contentWindow.postMessage(JSON.stringify({event:'command',func:'playVideo',args:[]}), '*');
+      }catch(e){}
+    };
+    videoFrame.addEventListener('load', playWhenReady);
+    setTimeout(playWhenReady, 1200);
+  }
+
+  const reveals=root.querySelectorAll('.sgprp-reveal');
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver((entries,obs)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){entry.target.classList.add('sgprp-visible');obs.unobserve(entry.target);}
+      });
+    },{threshold:.12});
+    reveals.forEach(el=>io.observe(el));
+  }else{
+    reveals.forEach(el=>el.classList.add('sgprp-visible'));
+  }
+
+  const counters=root.querySelectorAll('[data-count]');
+  const animateCounter=(el)=>{
+    const target=Number(el.dataset.count||0), suffix=el.dataset.suffix||'';
+    const duration=1200, start=performance.now();
+    const tick=(now)=>{
+      const p=Math.min((now-start)/duration,1);
+      const eased=1-Math.pow(1-p,3);
+      el.textContent=Math.round(target*eased)+suffix;
+      if(p<1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+  if('IntersectionObserver' in window){
+    const cio=new IntersectionObserver((entries,obs)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){entry.target.querySelectorAll('[data-count]').forEach(animateCounter);obs.unobserve(entry.target);}
+      });
+    },{threshold:.25});
+    const stats=root.querySelector('.sgprp-stats');
+    if(stats) cio.observe(stats);
+  }
+})();
+</script>
+<!-- END ADDED PREMIUM COMPANY PRESENTATION -->
+</section>
+
+<div class="presentation-content">
+<div class="container">
+
+
+
+<section class="brands-home-section">
+  <div class="brands-home-inner">
+    <div class="brands-home-heading">
+      <span class="eyebrow">NOS MARQUES</span>
+      <h2>Nos Marques</h2>
+      <span class="heading-line"></span>
+      <p>Découvrez les marques et références de pièces de rechange adaptées aux camions et poids lourds.</p>
+    </div>
+
+    <div class="brands-home-carousel">
+      <button class="brands-home-arrow brands-home-prev" type="button" aria-label="Marques précédentes">&#10094;</button>
+      <div class="brands-home-viewport">
+        <div class="brands-home-track">
+          <div class="brands-home-slide"><img src="assets/brand-scania.png" alt="Scania"></div>
+          <div class="brands-home-slide"><img src="assets/brand-renault-trucks.png" alt="Renault Trucks"></div>
+          <div class="brands-home-slide"><img src="assets/brand-iveco.png" alt="Iveco"></div>
+          <div class="brands-home-slide"><img src="assets/brand-bp.png" alt="BP"></div>
+          <div class="brands-home-slide"><img src="assets/brand-clark.png" alt="Clark"></div>
+          <div class="brands-home-slide"><img src="assets/brand-tcm.png" alt="TCM"></div>
+          <div class="brands-home-slide"><img src="assets/brand-linde.png" alt="Linde"></div>
+          <div class="brands-home-slide"><img src="assets/brand-isuzu.png" alt="Isuzu"></div>
+          
+          
+        </div>
+      </div>
+      <button class="brands-home-arrow brands-home-next" type="button" aria-label="Marques suivantes">&#10095;</button>
+    </div>
+
+    <div class="brands-home-more">
+      <a href="marques.html">Voir toutes les marques</a>
+    </div>
+  </div>
+</section>
+
+<style>
+.brands-home-section{padding:82px 20px;background:#f7f8fc}
+.brands-home-inner{max-width:1180px;margin:auto}
+.brands-home-heading{text-align:center;margin-bottom:42px}
+.brands-home-heading .eyebrow{display:block;color:#e11b22;font-size:12px;font-weight:800;letter-spacing:2px;margin-bottom:10px}
+.brands-home-heading h2{margin:0;color:#07104b;font-size:42px;font-weight:800}
+.brands-home-heading .heading-line{display:block;width:64px;height:4px;background:#e11b22;margin:16px auto 12px;border-radius:3px}
+.brands-home-heading p{margin:0;color:#70758a;font-size:15px}
+.brands-home-carousel{display:flex;align-items:center;gap:18px}
+.brands-home-viewport{overflow:hidden;flex:1}
+.brands-home-track{display:flex;transition:transform .45s ease}
+.brands-home-slide{flex:0 0 20%;padding:14px}
+.brands-home-slide img{width:100%;height:115px;object-fit:contain;background:#fff;border-radius:12px;padding:14px;box-shadow:0 8px 24px rgba(7,16,75,.08);transition:transform .25s ease,box-shadow .25s ease}
+.brands-home-slide img:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(7,16,75,.14)}
+.brands-home-arrow{width:44px;height:44px;border:0;border-radius:50%;background:#07104b;color:#fff;font-size:25px;cursor:pointer;flex:none;transition:.2s}
+.brands-home-arrow:hover{background:#e11b22;transform:scale(1.05)}
+.brands-home-more{text-align:center;margin-top:30px}
+.brands-home-more a{display:inline-block;color:#07104b;font-weight:800;text-decoration:none;border-bottom:2px solid #e11b22;padding-bottom:4px}
+@media(max-width:900px){.brands-home-slide{flex-basis:33.333%}}
+@media(max-width:600px){.brands-home-section{padding:60px 14px}.brands-home-heading h2{font-size:32px}.brands-home-slide{flex-basis:100%}.brands-home-slide img{height:135px}}
+</style>
+
+<script>
+(function(){
+  const root = document.currentScript && document.currentScript.previousElementSibling;
+  const section = root && root.classList.contains('brands-home-section') ? root : document.querySelector('.brands-home-section');
+  if(!section) return;
+  const track = section.querySelector('.brands-home-track');
+  const slides = [...section.querySelectorAll('.brands-home-slide')];
+  const prev = section.querySelector('.brands-home-prev');
+  const next = section.querySelector('.brands-home-next');
+  let index = 0;
+  let timer;
+
+  function visible(){
+    return window.innerWidth <= 600 ? 1 : (window.innerWidth <= 900 ? 3 : 5);
+  }
+  function update(){
+    const v = visible();
+    const max = Math.max(0, slides.length - v);
+    index = Math.min(index, max);
+    track.style.transform = 'translateX(-' + (index * (100 / v)) + '%)';
+  }
+  function go(delta){
+    const v = visible();
+    const max = Math.max(0, slides.length - v);
+    index += delta;
+    if(index < 0) index = max;
+    if(index > max) index = 0;
+    update();
+  }
+  prev.addEventListener('click', ()=>{go(-1); restart();});
+  next.addEventListener('click', ()=>{go(1); restart();});
+  function start(){ timer=setInterval(()=>go(1),3500); }
+  function restart(){ clearInterval(timer); start(); }
+  window.addEventListener('resize', update);
+  update();
+  start();
+})();
+</script>
+
+<section class="section">
+  <div class="section-head anim">
+    <div class="tag">Avis clients</div>
+
+    <h2>Ce que nos clients pensent de SGPR</h2>
+
+    <p>
+      La satisfaction de nos clients professionnels est au cœur de notre
+      engagement.
+    </p>
+  </div>
+
+  <div class="reviews">
+
+    <article class="review anim d1">
+      <div class="stars">★★★★★</div>
+      <p>
+        « Service sérieux et réactif. Les pièces sont disponibles rapidement
+        et les conseils sont appréciés. »
+      </p>
+    </article>
+
+    <article class="review anim d2">
+      <div class="stars">★★★★★</div>
+      <p>
+        « Très bonne expérience avec SGPR. Une équipe professionnelle,
+        disponible et à l’écoute de nos besoins. »
+      </p>
+    </article>
+
+    <article class="review anim d3">
+      <div class="stars">★★★★★</div>
+      <p>
+        « Bonne qualité des pièces et traitement rapide des demandes.
+        Nous sommes satisfaits du service. »
+      </p>
+    </article>
+
+  </div>
+
+  <div class="notice"></div>
+</section>
+<section class="cta anim d4"><div><h2>Besoin d’une pièce pour votre camion ?</h2><p>Envoyez-nous la référence, le modèle du camion ou les informations de la pièce recherchée afin que notre équipe puisse étudier votre demande.</p></div><a class="btn" href="devis.html">Demander un devis</a></section>
+</div></div>
+
+<footer class="sgpr-shared-footer"><div>Copyright © 2026 | SGPR</div></footer>
+<script src="assets/animations.js"></script>
+<script>
+let homeSlide=0;
+const homeTrack=document.getElementById('homeCarouselTrack');
+const homeDots=document.querySelectorAll('.home-carousel .dot');
+function renderHomeCarousel(){homeTrack.style.transform=`translateX(-${homeSlide*33.333333}%)`;homeDots.forEach((d,i)=>d.classList.toggle('active',i===homeSlide));}
+function moveHomeCarousel(dir){homeSlide=(homeSlide+dir+3)%3;renderHomeCarousel();}
+function goHomeCarousel(i){homeSlide=i;renderHomeCarousel();}
+setInterval(()=>moveHomeCarousel(1),5000);
+</script>
+</body></html>
+<style>
+@media(max-width:600px){.social-link{width:30px;height:30px}.social-link svg{width:15px;height:15px}}
+</style>
